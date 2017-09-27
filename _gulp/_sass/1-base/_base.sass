@@ -30,7 +30,7 @@ body
 body
   background: $color-white
   font-size: rem(16)
-  font-family: $primary-font
+  font-family: $font-roboto-light
   color: $primary-color
   -webkit-font-smoothing: antialiased
   -webkit-text-size-adjust: 100%
@@ -38,48 +38,82 @@ body
 //  Typography
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
   color: $primary-color
-  font-weight: bold
+  font-weight: normal
+  font-family: $font-roboto-bold
   text-decoration: none
-  margin: 0 0 15px 0
+  margin: 0 0 26px 0
 
 .h1, h1
-  font-size: rem(21)
-  line-height: 1.05
+  font-size: rem(50)
+  line-height: 1.2
   letter-spacing: -1px
-  margin-bottom: 25px
+  font-family: $font-intro
+  // color: $color-blue
+
+  &--afLine
+    position: relative
+    // padding-right: 65px
+    display: inline-block
+    display: table
+    &>*
+      display: table-cell
+      vertical-align: top
+    &::after
+      display: inline-block
+      vertical-align: middle
+      content: ''
+      width: 50px
+      height: 1px
+      background: $color-blue
+      margin-left: 10px
+      // position: absolute
+      // right: 0
+      // top: 10px
+
+.h1
+  &--dark
+    color: $primary-color
 
 .h2, h2
-  font-size: rem(18)
+  font-size: rem(30)
   line-height: 1.14
-  margin-bottom: 20px
+  // color: $color-blue
 
 .h3, h3
-  font-size: rem(16)
+  font-size: rem(25)
   line-height: 1.38
 
 .h4, h4
-  font-size: rem(14)
+  font-size: rem(21)
   line-height: 1.38
 
+  &--intro
+    font-family: $font-intro
+    font-size: rem(20)
+    text-transform: uppercase
+    // color: $color-blue
+    margin-bottom: 15px
+
 .h5, h5
-  font-size: rem(13)
+  font-size: rem(18)
 
 .h6, h6
-  font-size: rem(12)
+  font-size: rem(16)
 
 .small, small
   font-size: rem(12)
   line-height: 1.2
 
 p
-  line-height: 1.3
-  margin: 0 0 20px 0
+  line-height: 1.6
+  margin: 0 0 28px 0
 
 em, i, .em, .i
   font-style: italic
 
 strong, b, .strong, .b
-  font-weight: bold
+  font-weight: 400
+  font-family: $font-roboto-medium
 
 hr
   border: solid #ddd
@@ -93,7 +127,7 @@ a, .link
   color: $link-color
   text-decoration: underline
   outline: none
-  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease
+  transition: color 0.35s, background-color 0.35s, border-color 0.35s
 
   &:hover, &:focus, &:active
     color: $link-color
@@ -110,6 +144,9 @@ a.link
   width: 100%
   min-width: 320px
   padding: 0 15px
+
+.content
+  padding-top: 20px
 
 /* text align */
 .text
@@ -203,6 +240,11 @@ a.link
 .section
   padding: 50px 0
   min-width: 320px
+  &__header
+    text-align: center
+    &--big
+      .h1, h1
+        font-size: rem(70)
 
 ul li
   list-style-type: disc

@@ -2,55 +2,109 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>Главная - siteName</title>
+        <title>About us - APM Group</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <!-- Load CSS & WebFonts Main Function-->
-        <script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
-        <!-- Load CSS Start-->
-        <script>loadCSS( "./js/libs/magnific-popup/magnific-popup.css", false, "all" );</script>
-        <script>loadCSS( "./css/main.css?ver=1.0.0", false, "all" );</script>
-        <!-- Load CSS End-->
-        <!-- Load CSS Compiled without JS-->
-        <noscript>
-            <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
-            <link rel="stylesheet" href="./css/main.css">
-        </noscript>
+        <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="./favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="./favicon/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="./favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="./favicon/manifest.json">
+        <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="./favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="./favicon/mstile-144x144.png">
+        <meta name="msapplication-config" content="./favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
         <!-- Preloader-->
-        <div class="loader">
-            <div class="loader__block"></div>
-        </div>
         <!-- Header-->
         <header class="header">
             <div class="container">
-                <nav role="navigation" class="navigation">
+                <div class="header__logo"><a href="#!"><img src="./img/logo.png" alt=""></a></div>
+                <div class="header__links">
                     <ul>
-                        <li class="active"><a href="#" title="Главная">Главная</a></li>
-                        <li><a href="#" title="О нас">О нас</a></li>
-                        <li><a href="#" title="Продукция">Продукция</a></li>
-                        <li><a href="#" title="Сотрудничество">Сотрудничество</a></li>
-                        <li><a href="#" title="Наши магазины">Наши магазины</a></li>
-                        <li><a href="#" title="Контакты">Контакты</a></li>
+                        <li class="active"><a href="#!">Rent</a></li>
+                        <li><a href="#!">Parts</a></li>
+                        <li><a href="#!">Sale</a></li>
                     </ul>
+                </div>
+                <div class="header__language">
+                    <ul>
+                        <li class="active"><span>En</span></li>
+                        <li><a href="#!">Ru</a></li>
+                    </ul>
+                </div>
+                <nav role="navigation" class="header__nav">
+                    <button class="header__button">menu</button>
+                    <div class="header__nav-wrapper">
+                        <ul>
+                            <li><a href="#" title="Home">Home</a></li>
+                            <li class="active"><a href="#" title="About us">About us</a></li>
+                            <li><a href="#" title="Parts">Parts</a></li>
+                            <li><a href="#" title="News">News</a></li>
+                            <li><a href="#" title="Contacts">Contacts</a></li>
+                        </ul>
+                        <div class="header__social"><a href="#!">Facebook</a><a href="#!">Youtube</a><a href="#!">Twitter</a></div>
+                    </div>
                 </nav>
             </div>
         </header>
+        <!-- Content-->
         <div class="content">
             <div class="container">
-                <h1>Главная 2</h1>
-                <div class="row">
-                    <div class="col-md-4">4 collumns</div>
-                    <div class="col-md-8">8 collumns</div>
+                <div class="section__header section__header--big">
+                    <h1>about  us</h1>
                 </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <p> <strong>Auto Parts Market </strong> &nbsp;is a complete solution to increase the profit of each company operating in the field of automotive business.</p>
+                        <p>Our main area is the spare parts wholesale (for Japanese, Korean and German cars).</p>
+                        <p>Our stock is constantly maintained in the presence of a large range of parts and accessories. Here you will find both original parts and certified duplicates for all cars series.</p>
+                        <p>Therefore we deliver only high quality goods, focusing on long-term cooperation.</p>
+                        <p>We respect our customers and doing everything to save their money and time.</p>
+                        <p>We see a huge space for innovation in the business and implement our own developments to simplify the work process.</p>
+                    </div>
+                    <div class="col-md-5"><img src="./img/about-logo-1.png" alt="" class="img-responsive"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5"><img src="./img/about-logo-2.png" alt="" class="img-responsive"></div>
+                    <div class="col-md-7">
+                        <div class="h3">Our Directions</div>
+                        <ul>
+                            <li>Supplies from the warehouses all over the world</li>
+                            <li>Collective procurement;</li>
+                            <li>Tailor made spare parts manufacturing by the South Korean, Taiwan, Malaysian, Indian factories;</li>
+                            <li>Create and promote your own brand;</li>
+                            <li>Transport logistics;</li>
+                            <li>Audit and setting training system and development of your staff.</li>
+                        </ul>
+                        <p>Our well-established system of supplies will allow you to implement orders from anywhere in the world easily, quickly and at the lowest cost.</p>
+                        <p><strong>You can always be assured in competent and friendly service, the speed and accuracy of the orders processing and high quality of supplied spare parts!</strong></p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <hr>
+                <div class="h3">spare parts for brands</div>
             </div>
         </div>
         <!-- Footer-->
         <footer class="footer">
             <div class="container">
-                <div>&copy; 2016</div>
+                <div class="footer__copyright">© 2017 by Auto Parts Market. </div>
             </div>
         </footer>
         <div style="height: 1000px; background-color: #000"></div>
@@ -63,7 +117,7 @@
         -->
         <!-- Footer js-->
         <!-- Load Scripts-->
-        <script src="./js/libs.js" async></script>
-        <script src="./js/common.js" async></script>
+        <script src="./js/libs.js"></script>
+        <script src="./js/common.js"></script>
     </body>
 </html>

@@ -2,14 +2,41 @@
 header.header
   .container
     
-    -var navigation = { 'Главная': '#', 'О нас': '#', 'Продукция': '#', 'Сотрудничество': '#', 'Наши магазины': '#', 'Контакты': '#'};
-    
-    nav.navigation(role="navigation")
+    .header__logo
+      a(href="#!")
+        img(src="./img/logo.png", alt="")
+        
+    .header__links
       ul
-        each val, key in navigation
-          if active === key
-            li.active
-              a(href=val, title=key)= key
-          else
-            li
-              a(href=val, title=key)= key
+        li.active
+          a(href="#!") Rent
+        li
+          a(href="#!") Parts
+        li
+          a(href="#!") Sale
+    
+    -var navigation = { 'Home': '#', 'About us': '#', 'Parts': '#', 'News': '#', 'Contacts': '#'};
+    
+    .header__language
+      ul
+        li.active
+          span En
+        li
+          a(href="#!") Ru
+    
+    nav.header__nav(role="navigation")
+      button.header__button menu
+      .header__nav-wrapper
+        ul
+          each val, key in navigation
+            if active === key
+              li.active
+                a(href=val, title=key)= key
+            else
+              li
+                a(href=val, title=key)= key
+        .header__social
+          a(href="#!") Facebook
+          a(href="#!") Youtube
+          a(href="#!") Twitter
+    

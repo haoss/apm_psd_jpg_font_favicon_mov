@@ -1,8 +1,105 @@
 /* header */
 .header
-  background-color: $color-gray
-  height: 100px
+  // background-color: $color-gray
+  // height: 100px
+  padding-top: 37px
+  padding-bottom: 35px
+  // box-shadow: 0 5px 5px rgba(0,0,0,.2)
 
-  ul
-    li
-      display: inline
+  &__logo
+    float: left
+    margin-left: 24px
+    img
+      width: 118px
+      height: 86px
+
+  &__language
+    float: right
+    margin: 22px 12px 0 47px
+    font-size: 11px
+    font-family: $font-roboto-bold
+    text-transform: uppercase
+    background: $color-blue
+    color: $color-white
+    cursor: pointer
+    position: relative
+    width: 28px
+    height: 28px
+    border-radius: 25px
+    transition: height 0.35s
+    ul
+      margin: 0
+      padding: 0
+      li
+        list-style: none
+        margin: 0
+        position: absolute
+        z-index: 5
+        opacity: 0
+        top: 0
+        left: 0
+        transition: opacity 0.35s
+        // transition-delay: 0.1s
+        &>span, &>a
+          display: block
+          height: 28px
+          width: 28px
+          overflow: hidden
+          border-radius: 50%
+          text-decoration: none
+          text-align: center
+          line-height: 27px
+          background-color: $color-white
+          color: $color-blue
+          border: 1px solid $color-blue
+        &>span
+          background-color: $color-blue
+          color: $color-white
+        &.active
+          z-index: 10
+          opacity: 1
+    &.is-active
+      height: 56px
+      ul
+        li
+          top: calc(100% - 28px)
+          opacity: 1
+          &.active
+            top: 0
+
+
+  &__links
+    float: left
+    margin-left: 53px
+    font-size: rem(14)
+    text-transform: uppercase
+    font-family: $font-roboto-bold
+    ul
+      padding: 0
+      margin: 0
+      li
+        list-style: none
+        margin: 0
+        display: block
+        a
+          display: inline-block
+          text-decoration: none
+          color: $primary-color
+          &:hover
+            color: $color-blue
+        &.active
+          a
+            color: $color-blue
+            &::after
+              content: "\f2ca"
+              font-family: $font-ionicons
+              display: inline-block
+              margin-left: 13px
+
+  &__social
+    display: none
+  &__button
+    display: none
+
+.header__nav
+  float: right

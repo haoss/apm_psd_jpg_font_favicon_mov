@@ -1,14 +1,7 @@
-'use strict'
+'use strict';
 
 // Document ready
 $(document).on('ready', function(){
-
-  // SVG Fallback
-  if(!Modernizr.svg) {
-    $("img[src*='svg']").attr("src", function() {
-      return $(this).attr("src").replace(".svg", ".png");
-    });
-  };
 
   // E-mail Ajax Send
   // Documentation & Example: https://github.com/agragregra/uniMail
@@ -79,7 +72,25 @@ $(document).on('ready', function(){
     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
   });
 
-  console.log('ready');
+  var headerLanguage = $('.header__language');
+
+  headerLanguage.on('click', function(e){
+    $(this).addClass('is-active');
+  });
+  headerLanguage.on('click', function(e){
+    e.stopPropagation();
+  });
+
+
+  $(document).on('click', function(){
+
+    if (headerLanguage.hasClass('is-active')) {
+      setTimeout(function(){
+        headerLanguage.removeClass('is-active');
+      }, 1500)
+    }
+
+  });
 
   // Chrome Smooth Scroll
   try {
@@ -98,7 +109,6 @@ $(document).on('ready', function(){
 $(window).on('load', function() {
   // $(".loader_inner").fadeOut();
   $(".loader").delay(400).fadeOut("slow");
-  console.log('load');
 });
 
 /*

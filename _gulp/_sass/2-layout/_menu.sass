@@ -6,3 +6,77 @@
     li
         list-style: none
         margin: 0
+
+.header__nav-wrapper
+  ul
+    font-family: $font-roboto-medium
+    text-transform: uppercase
+    margin: 23px 0 0 0
+    padding: 0
+    white-space: nowrap
+    li
+      margin: 0
+      list-style: none
+      display: inline-block
+      &+li
+        margin-left: 44px
+      &>a, &>span
+        display: block
+        text-decoration: none
+        color: $primary-color
+        border-bottom: 2px solid transparent
+        line-height: 28px
+        &:hover
+          color: $color-blue
+      &.active
+        &>a, &>span
+          // text-decoration: underline
+          color: $color-blue
+          border-bottom-color: $color-blue
+
+
+/**/
+.list
+  font-size: rem(14)
+  li
+    line-height: 1.85
+  &--mark
+    margin-left: 0
+    padding-left: 0
+    li
+      list-style: none
+      margin-left: 0
+      position: relative
+      padding-left: 30px
+
+ul.list--mark
+  li
+    &::before
+      content: "\f412"
+      position: absolute
+      font-family: "Ionicons"
+      left: 0
+      top: 3px
+      font-size: rem(22)
+      color: $color-blue
+      display: block
+      line-height: 1
+
+ol.list--mark
+  counter-reset: list
+  li
+    &::before
+      counter-increment: list
+      content: counter(list)
+      display: block
+      height: 20px
+      line-height: 21px
+      width: 20px
+      border-radius: 50%
+      background: $color-blue
+      color: $color-white
+      font-size: rem(10)
+      position: absolute
+      left: 0
+      top: 2px
+      text-align: center

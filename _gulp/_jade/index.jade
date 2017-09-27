@@ -2,8 +2,8 @@ doctype
 
 html(lang="ru")
   
-  -var active = 'Главная' //активный пункт меню, список в header.jade
-  -var pageTitle = 'Главная' + ' - siteName' //title страницы для генерации верстки  
+  -var active = 'About us' //активный пункт меню, список в header.jade
+  -var pageTitle = 'About us' + ' - APM Group' //title страницы для генерации верстки  
 
   include ./_include/_head
 
@@ -14,15 +14,47 @@ html(lang="ru")
     
     include ./_include/_header
     
+    // Content
     .content
       .container
         
-        h1 Главная 2
+        .section__header.section__header--big
+          h1 about  us
         
         .row
-          .col-md-4 4 collumns
-          .col-md-8 8 collumns
-
+          .col-md-7
+            p 
+              strong Auto Parts Market 
+              | &nbsp;is a complete solution to increase the profit of each company operating in the field of automotive business.
+            p Our main area is the spare parts wholesale (for Japanese, Korean and German cars).
+            p Our stock is constantly maintained in the presence of a large range of parts and accessories. Here you will find both original parts and certified duplicates for all cars series.
+            p Therefore we deliver only high quality goods, focusing on long-term cooperation.
+            p We respect our customers and doing everything to save their money and time.
+            p We see a huge space for innovation in the business and implement our own developments to simplify the work process.
+          .col-md-5
+            img(src="./img/about-logo-1.png", alt="").img-responsive
+        
+        .row
+          .col-md-5
+            img(src="./img/about-logo-2.png", alt="").img-responsive
+          .col-md-7
+            .h3 Our Directions
+            ul
+              li Supplies from the warehouses all over the world
+              li Collective procurement;
+              li Tailor made spare parts manufacturing by the South Korean, Taiwan, Malaysian, Indian factories;
+              li Create and promote your own brand;
+              li Transport logistics;
+              li Audit and setting training system and development of your staff.
+            
+            p Our well-established system of supplies will allow you to implement orders from anywhere in the world easily, quickly and at the lowest cost.
+            p
+              strong You can always be assured in competent and friendly service, the speed and accuracy of the orders processing and high quality of supplied spare parts!
+        
+        .clear
+        hr
+        
+        .h3 spare parts for brands
     
     include ./_include/_footer
     div(style="height: 1000px; background-color: #000")
@@ -35,6 +67,6 @@ html(lang="ru")
 
     include ./_include/_footer-js
     // Load Scripts
-    script(src="./js/libs.js" async)
-    script(src="./js/common.js" async)
+    script(src="./js/libs.js")
+    script(src="./js/common.js")
     include ./_include/_js-body-bottom

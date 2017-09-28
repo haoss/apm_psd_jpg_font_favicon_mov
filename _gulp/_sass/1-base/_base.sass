@@ -27,6 +27,10 @@ body
   margin: 0
   min-width: 320px
 
+.base
+  transform: translateX(0)
+  transition: transform 0.35s
+
 body
   background: $color-white
   font-size: rem(16)
@@ -34,6 +38,11 @@ body
   color: $primary-color
   -webkit-font-smoothing: antialiased
   -webkit-text-size-adjust: 100%
+  &.is-active
+    position: fixed
+    .base
+      will-change: transform
+      transform: translateX(-166px)
 
 //  Typography
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
@@ -48,40 +57,16 @@ body
   line-height: 1.2
   letter-spacing: -1px
   font-family: $font-intro
-  // color: $color-blue
-
-  &--afLine
-    position: relative
-    // padding-right: 65px
-    display: inline-block
-    display: table
-    &>*
-      display: table-cell
-      vertical-align: top
-    &::after
-      display: inline-block
-      vertical-align: middle
-      content: ''
-      width: 50px
-      height: 1px
-      background: $color-blue
-      margin-left: 10px
-      // position: absolute
-      // right: 0
-      // top: 10px
-
-.h1
-  &--dark
-    color: $primary-color
 
 .h2, h2
   font-size: rem(30)
   line-height: 1.14
-  // color: $color-blue
+  font-family: $font-intro
 
 .h3, h3
   font-size: rem(25)
   line-height: 1.38
+  font-family: $font-intro
 
 .h4, h4
   font-size: rem(21)

@@ -72,14 +72,26 @@ $(document).on('ready', function(){
     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
   });
 
-  var headerLanguage = $('.header__language');
+  var headerLanguage = $('.header__language'),
+      headerButton = $('#header__button'),
+      body = $('body')
+  ;
 
   headerLanguage.on('click', function(e){
-    $(this).addClass('is-active');
+    $(this).toggleClass('is-active');
   });
   headerLanguage.on('click', function(e){
     e.stopPropagation();
   });
+
+  headerButton.on('click', function(e){
+    e.stopPropagation();
+    $(this).find('.hamburger').toggleClass('is-active');
+    body.toggleClass('is-active');
+  });
+  $('.header__nav-wrapper').on('click', function(e){
+    e.stopPropagation();
+  })
 
 
   $(document).on('click', function(){
@@ -87,7 +99,15 @@ $(document).on('ready', function(){
     if (headerLanguage.hasClass('is-active')) {
       setTimeout(function(){
         headerLanguage.removeClass('is-active');
-      }, 1500)
+      }, 1500);
+    }
+
+    if (body.hasClass('is-active') && headerButton.find('.hamburger').hasClass('is-active')) {
+      setTimeout(function(){
+        headerButton.find('.hamburger').removeClass('is-active')
+        body.removeClass('is-active');
+      }, 500);
+
     }
 
   });
@@ -109,6 +129,16 @@ $(document).on('ready', function(){
 $(window).on('load', function() {
   // $(".loader_inner").fadeOut();
   $(".loader").delay(400).fadeOut("slow");
+});
+
+$(window).on('resize', function() {
+  var width = $(window).width();
+
+  if (width > 767) {
+    if ($('body').hasClass('is-active')) {
+      $('body').removeClass('is-active');
+    }
+  }
 });
 
 /*

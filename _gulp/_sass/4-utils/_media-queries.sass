@@ -13,11 +13,46 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
-  /**/
+  .header
+    &__language
+      margin-right: 0
+  p
+    margin-bottom: 23px
+  .about__text-first
+    p
+      margin-right: -30px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
-  /**/
+  .header
+    &__logo
+      margin-left: 0
+    &__links
+      margin-left: 30px
+    &__language
+      margin-left: 30px
+    &__nav-wrapper
+      ul
+        li
+          &+li
+            margin-left: 23px
+  .about__text-first p
+    margin-right: 0
+
+@media (max-width: 767px) and (min-width: 991px)
+  .about
+    &__img--first
+      float: right
+      max-width: 330px
+      margin-left: 15px
+    &__img--second
+      float: left
+      max-width: 330px
+      margin-right: 15px
+      margin-top: 50px
+    &__text-second
+      .list
+        padding-left: 348px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -27,9 +62,95 @@
     transform: none !important
     animation: none !important
 
+  .h1, h1
+
+  .section
+    &__header
+      &--big
+        .h1, h1
+          font-size: rem(54)
+
+  .header
+    height: 150px
+    &__nav-wrapper
+      position: fixed
+      left: 100%
+      top: 0
+      bottom: 0
+      background: #f8f8f8
+      width: 166px
+      z-index: 20
+      transform: translateX(166px)
+      transition: transform 0.35s
+      box-shadow: 10px -25px 30px rgba(#c4c9ce,.5) inset
+      ul
+        margin-top: 26px
+        margin-bottom: 45px
+        li
+          display: block
+          &>a,&>span
+            display: block
+            text-align: left
+            padding-left: 46px
+            height: 40px
+            line-height: 40px
+          &+li
+            margin: 0
+            padding: 0
+          &.active
+            &>a,&>span
+              color: $color-white
+              background-color: $color-blue
+              border: 0
+              position: relative
+              &::before
+                font-family: $font-ionicons
+                content: "\f30f"
+                position: absolute
+                left: 25px
+                top: 13px
+                line-height: 1
+    &__button
+      display: block
+    &__social
+      display: block
+    &__language
+      margin-top: 45px
+  body.is-active
+    .header
+      &__nav-wrapper
+        will-change: transform
+        transform: translateX(0)
+  .about
+    &__img--first
+      margin-bottom: 30px
+
+@media (max-height: 320px) and (orientation: landscape)
+  .header
+    &__nav-wrapper
+      ul
+        margin-top: 15px
+        margin-bottom: 15px
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
-  /**/
+  .section
+    &__header
+      &--big
+        .h1, h1
+          font-size: rem(46)
+  .header
+    height: 130px
+    &__logo
+      img
+        width: 95px
+        height: 68px
+    &__links
+      margin-left: 20px
+    &__button
+      margin-top: 1px
+    &__language
+      margin-top: 38px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

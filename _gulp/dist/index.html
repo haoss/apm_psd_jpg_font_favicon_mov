@@ -30,84 +30,96 @@
         <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
-        <!-- Preloader-->
-        <!-- Header-->
-        <header class="header">
-            <div class="container">
-                <div class="header__logo"><a href="#!"><img src="./img/logo.png" alt=""></a></div>
-                <div class="header__links">
-                    <ul>
-                        <li class="active"><a href="#!">Rent</a></li>
-                        <li><a href="#!">Parts</a></li>
-                        <li><a href="#!">Sale</a></li>
-                    </ul>
-                </div>
-                <div class="header__language">
-                    <ul>
-                        <li class="active"><span>En</span></li>
-                        <li><a href="#!">Ru</a></li>
-                    </ul>
-                </div>
-                <nav role="navigation" class="header__nav">
-                    <button class="header__button">menu</button>
-                    <div class="header__nav-wrapper">
+        <div class="base">
+            <!-- Preloader-->
+            <!-- Header-->
+            <header class="header">
+                <div class="container">
+                    <div class="header__logo"><a href="#!"><img src="./img/logo.png" alt=""></a></div>
+                    <div class="header__links">
                         <ul>
-                            <li><a href="#" title="Home">Home</a></li>
-                            <li class="active"><a href="#" title="About us">About us</a></li>
-                            <li><a href="#" title="Parts">Parts</a></li>
-                            <li><a href="#" title="News">News</a></li>
-                            <li><a href="#" title="Contacts">Contacts</a></li>
+                            <li class="active"><a href="#!">Rent</a></li>
+                            <li><a href="#!">Parts</a></li>
+                            <li><a href="#!">Sale</a></li>
                         </ul>
-                        <div class="header__social"><a href="#!">Facebook</a><a href="#!">Youtube</a><a href="#!">Twitter</a></div>
                     </div>
-                </nav>
-            </div>
-        </header>
-        <!-- Content-->
-        <div class="content">
-            <div class="container">
-                <div class="section__header section__header--big">
-                    <h1>about  us</h1>
-                </div>
-                <div class="row">
-                    <div class="col-md-7">
-                        <p> <strong>Auto Parts Market </strong> &nbsp;is a complete solution to increase the profit of each company operating in the field of automotive business.</p>
-                        <p>Our main area is the spare parts wholesale (for Japanese, Korean and German cars).</p>
-                        <p>Our stock is constantly maintained in the presence of a large range of parts and accessories. Here you will find both original parts and certified duplicates for all cars series.</p>
-                        <p>Therefore we deliver only high quality goods, focusing on long-term cooperation.</p>
-                        <p>We respect our customers and doing everything to save their money and time.</p>
-                        <p>We see a huge space for innovation in the business and implement our own developments to simplify the work process.</p>
-                    </div>
-                    <div class="col-md-5"><img src="./img/about-logo-1.png" alt="" class="img-responsive"></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-5"><img src="./img/about-logo-2.png" alt="" class="img-responsive"></div>
-                    <div class="col-md-7">
-                        <div class="h3">Our Directions</div>
+                    <div class="header__language">
                         <ul>
-                            <li>Supplies from the warehouses all over the world</li>
-                            <li>Collective procurement;</li>
-                            <li>Tailor made spare parts manufacturing by the South Korean, Taiwan, Malaysian, Indian factories;</li>
-                            <li>Create and promote your own brand;</li>
-                            <li>Transport logistics;</li>
-                            <li>Audit and setting training system and development of your staff.</li>
+                            <li class="active"><span>En</span></li>
+                            <li><a href="#!">Ru</a></li>
                         </ul>
-                        <p>Our well-established system of supplies will allow you to implement orders from anywhere in the world easily, quickly and at the lowest cost.</p>
-                        <p><strong>You can always be assured in competent and friendly service, the speed and accuracy of the orders processing and high quality of supplied spare parts!</strong></p>
                     </div>
+                    <nav role="navigation" class="header__nav">
+                        <button id="header__button" class="header__button">
+                            <div class="hamburger hamburger--arrowturn js-hamburger">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"> </div>
+                                </div>
+                            </div><span>menu</span>
+                        </button>
+                        <div class="header__nav-wrapper">
+                            <ul>
+                                <li><a href="#" title="Home">Home</a></li>
+                                <li class="active"><a href="#" title="About us">About us</a></li>
+                                <li><a href="#" title="Parts">Parts</a></li>
+                                <li><a href="#" title="News">News</a></li>
+                                <li><a href="#" title="Contacts">Contacts</a></li>
+                            </ul>
+                            <div class="header__social"><a href="#!"><img src="./img/icon/icon-facebook.svg" alt=""></a><a href="#!"><img src="./img/icon/icon-youtube.svg" alt=""></a><a href="#!"><img src="./img/icon/icon-instagram.svg" alt=""></a></div>
+                        </div>
+                    </nav>
                 </div>
-                <div class="clear"></div>
-                <hr>
-                <div class="h3">spare parts for brands</div>
+            </header>
+            <!-- Content-->
+            <div class="content">
+                <div class="container">
+                    <div class="section__header section__header--big">
+                        <h1>about  us</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-7 col-md-6 about__text-first"><img src="./img/about-logo-1.png" alt="" class="about__img about__img--first visible-sm">
+                            <p> <strong>Auto Parts Market </strong> &nbsp;is a complete solution to increase the profit of each company operating in the field of automotive business.</p>
+                            <p>Our main area is the spare parts wholesale (for Japanese, Korean and German cars).</p>
+                            <p>Our stock is constantly maintained in the presence of a large range of parts and accessories. Here you will find both original parts and certified duplicates for all cars series.</p>
+                            <p>Therefore we deliver only high quality goods, focusing on long-term cooperation.</p>
+                            <p>We respect our customers and doing everything to save their money and time.</p>
+                            <p>We see a huge space for innovation in the business and implement our own developments to simplify the work process.</p>
+                        </div>
+                        <div class="col-lg-5 col-md-6 hidden-sm"><img src="./img/about-logo-1.png" alt="" class="about__img about__img--first"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-7 col-lg-push-5 col-md-6 col-md-push-6 about__text-second"><img src="./img/about-logo-2.png" alt="" class="about__img about__img--second visible-sm">
+                            <div class="h3">Our Directions</div>
+                            <ul class="list list--mark">
+                                <li>Supplies from the warehouses all over the world</li>
+                                <li>Collective procurement;</li>
+                                <li>Tailor made spare parts manufacturing by the South Korean, Taiwan, Malaysian, Indian factories;</li>
+                                <li>Create and promote your own brand;</li>
+                                <li>Transport logistics;</li>
+                                <li>Audit and setting training system and development of your staff.</li>
+                            </ul>
+                            <p>Our well-established system of supplies will allow you to implement orders from anywhere in the world easily, quickly and at the lowest cost.</p>
+                            <p><strong>You can always be assured in competent and friendly service, the speed and accuracy of the orders processing and high quality of supplied spare parts!</strong></p>
+                        </div>
+                        <div class="col-lg-5 col-lg-pull-7 col-md-6 col-md-pull-6 hidden-sm">
+                            <div class="hidden-sm hidden-xs">
+                                <div class="clear60"></div>
+                            </div><img src="./img/about-logo-2.png" alt="" class="about__img about__img--second">
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <hr>
+                    <div class="h3">spare parts for brands</div>
+                </div>
             </div>
+            <!-- Footer-->
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__copyright">© 2017 by Auto Parts Market. </div>
+                </div>
+            </footer>
+            <div style="height: 1000px; background-color: #000"></div>
         </div>
-        <!-- Footer-->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer__copyright">© 2017 by Auto Parts Market. </div>
-            </div>
-        </footer>
-        <div style="height: 1000px; background-color: #000"></div>
         <!--[if gte IE 9]
         <script src='./js/libs/html5shiv/es5-shim.min.js'>
         <script src='./js/libs/html5shiv/html5shiv.min.js'>

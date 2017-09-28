@@ -25,7 +25,12 @@ header.header
           a(href="#!") Ru
     
     nav.header__nav(role="navigation")
-      button.header__button menu
+      button#header__button.header__button
+        .hamburger.hamburger--arrowturn.js-hamburger
+          .hamburger-box
+            .hamburger-inner 
+        span menu
+        
       .header__nav-wrapper
         ul
           each val, key in navigation
@@ -36,7 +41,10 @@ header.header
               li
                 a(href=val, title=key)= key
         .header__social
-          a(href="#!") Facebook
-          a(href="#!") Youtube
-          a(href="#!") Twitter
+          a(href="#!")
+            img(src="./img/icon/icon-facebook.svg", alt="")
+          a(href="#!")
+            img(src="./img/icon/icon-youtube.svg", alt="")
+          a(href="#!")
+            img(src="./img/icon/icon-instagram.svg", alt="")
     

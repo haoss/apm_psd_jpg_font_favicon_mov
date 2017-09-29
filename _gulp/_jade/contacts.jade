@@ -1,0 +1,70 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Contacts' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Contacts' + ' - APM Group' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    .base
+    
+      // Preloader
+      include ./_include/_preloader
+      
+      include ./_include/_header
+      
+      // Content
+      .content
+        .container
+          
+          .section__head.section__head--big
+            h1 Contacts
+          
+          .text-center
+            p Interested in car leasing or van buy parts? Business or Personal? One vehicle or a fleet of one hundred? Whatever your requirements - our friendly and informative experts are always here to help.
+            p Feel free to come and visit us, give us a call, email us or complete your details on the contact form below.
+            
+          // Contants
+          .section
+            .row
+              .col-md-5.col-md-offset-1
+                .h5 Contact Information
+                
+              .col-md-4.col-md-offset-1
+                .h5 Enquiry form
+                .form
+                  form(action="#")
+                    fieldset
+                      .form-group.custom-input
+                        label(for="input-name") Name
+                        input#input-name(type="text" name="name" placeholder="Name").form-control
+                      .form-group.custom-input
+                        label.hidden Email
+                        input(type="email" name="email" placeholder="Email").form-control
+                      .form-group.custom-input
+                        label.hidden Phone
+                        input(type="phone" name="phone" placeholder="Phone").form-control
+                      .form-group.custom-input
+                        label.hidden Message
+                        textarea(name="message" placeholder="Message").form-control
+                      
+                      button(type="button").btn.btn--blue
+                        span Send
+      
+      include ./_include/_footer
+      div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    include ./_include/_footer-js
+    // Load Scripts
+    script(src="./js/libs.js")
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom

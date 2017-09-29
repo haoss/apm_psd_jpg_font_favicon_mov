@@ -21,6 +21,30 @@
   .about__text-first
     p
       margin-right: -30px
+  .type
+    &__link
+
+      strong
+        font-size: rem(60)
+      small
+        margin-top: 5px
+      &--first
+        padding-left: 45px
+        img
+          right: -95px
+          top: 80px
+        small
+          padding-left: 10px
+      &--second
+        padding-right: 40px
+        img
+          left: -26px
+          top: 83px
+        small
+          padding-right: 10px
+    &__logo
+      transform: translate(-60px,-30px)
+
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -36,8 +60,41 @@
         li
           &+li
             margin-left: 23px
-  .about__text-first p
-    margin-right: 0
+  .about
+    &__text-first p
+      margin-right: 0
+    &__logo2
+      margin-top: 50px
+      &~.list
+        margin-left: 360px
+  .brands
+    .row
+      &>div:last-child
+        .img-responsive
+          margin-top: 25px
+  .type
+    &__link
+      padding-top: 40px
+      strong
+        font-size: rem(40)
+      small
+        margin-top: 5px
+      &--first
+        img
+          right: -45px
+          width: 230px
+        small
+          padding-left: 10px
+      &--second
+        padding-right: 45px
+        img
+          // left: -26px
+          // top: 83px
+          width: 185px
+        small
+          padding-right: 10px
+    &__logo
+      transform: translate(-96px,-30px)
 
 @media (max-width: 767px) and (min-width: 991px)
   .about
@@ -61,15 +118,14 @@
     transition-property: none !important
     transform: none !important
     animation: none !important
-
-  .h1, h1
-
+  .h3, .h4, .h5, .h6, h3, h4, h5, h6
+    margin-bottom: 15px
   .section
-    &__header
+    padding: 30px 0
+    &__head
       &--big
         .h1, h1
           font-size: rem(54)
-
   .header
     height: 150px
     &__nav-wrapper
@@ -124,6 +180,51 @@
   .about
     &__img--first
       margin-bottom: 30px
+    &__logo2 ~ .list
+      margin-left: 0
+  .type
+    &__body
+      background: none
+      height: auto
+    &__link
+      padding-top: 20px
+      display: block
+      height: 110px
+      width: 100%
+      float: none
+      position: inherit
+      background: url('../img/type-background.png') 0 0 no-repeat
+      background-size: 100% 110px
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        background: url('../img/type-logo-small.png')
+        background-position: left bottom
+        height: 73px
+        width: 158px
+        z-index: 5
+      &--first
+        margin-bottom: 35px
+        &::after
+          right: 25px
+        img
+          right: 2px
+          top: 45px
+          width: 180px
+          z-index: 15
+      &--second
+        padding-right: 40px
+        &::after
+          left: 37px
+        img
+          left: 12px
+          top: 50px
+          z-index: 15
+      strong
+        font-size: rem(40)
+      small
+        padding: 0
 
 @media (max-height: 320px) and (orientation: landscape)
   .header
@@ -135,7 +236,7 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
   .section
-    &__header
+    &__head
       &--big
         .h1, h1
           font-size: rem(46)
@@ -151,6 +252,23 @@
       margin-top: 1px
     &__language
       margin-top: 38px
+  .type
+    &__link
+      padding-top: 15px
+      &::after
+        display: none
+      &--first
+        padding-left: 30px
+        img
+          right: 0
+          width: 137px
+          top: 63px
+      &--second
+        padding-right: 25px
+        img
+          left: 0
+          width: 140px
+          top: 63px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

@@ -8,12 +8,10 @@ html(lang="ru")
   include ./_include/_head
 
   body
+    // Preloader
+    include ./_include/_preloader
     
     .base
-    
-      // Preloader
-      include ./_include/_preloader
-      
       include ./_include/_header
       
       // Content
@@ -41,7 +39,7 @@ html(lang="ru")
           .row
             .col-lg-7.col-lg-push-5.col-md-6.col-md-push-6.about__text-second
               img(src="./img/about-logo-2.png", alt="").about__logo2.visible-sm
-              .h3 Our Directions
+              .h3.h3--intro Our Directions
               ul.list.list--mark
                 li Supplies from the warehouses all over the world
                 li Collective procurement;
@@ -62,7 +60,7 @@ html(lang="ru")
           // Brands
           .section.brands
             .section__head
-              .h3 spare parts for brands
+              .h3.h3--intro spare parts for brands
             
             .row
               .col-md-6
@@ -92,8 +90,8 @@ html(lang="ru")
       <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
       <script src='./js/libs/html5shiv/respond.min.js'><![endif]
 
-    include ./_include/_footer-js
     // Load Scripts
     script(src="./js/libs.js")
+    include ./_include/_footer-js
     script(src="./js/common.js")
     include ./_include/_js-body-bottom

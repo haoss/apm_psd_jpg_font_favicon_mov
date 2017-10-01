@@ -1,0 +1,100 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'News' //активный пункт меню, список в header.jade
+  -var pageTitle = 'News' + ' - APM Group' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+      
+      // Content
+      .content
+        .container
+          
+          .section__head.section__head--big
+            h1 News
+            
+          .row
+            .col-sm-8
+            
+              // News
+              .news
+                // News block
+                a(href="#!").news__block
+                  .news__img
+                    img(src="./img/news-list-1.png", alt="").img-responsive
+                    .news__date March 14, 2017
+                  .news__title WORLDWIDE SALES OF TOYOTA HYBRIDS SURPASS 10 MILLION UNITS
+                  
+                // News block
+                a(href="#!").news__block
+                  .news__img
+                    img(src="./img/news-list-2.png", alt="").img-responsive
+                    .news__date March 14, 2017
+                  .news__title INTRODUCING PROJECT BLACK S
+
+              // Pagination
+              .pagination
+                ul
+                  li
+                    a(href="#!") 1
+                  li
+                    a(href="#!") 2
+                  li.active
+                    a(href="#!") 3
+                  li
+                    a(href="#!") 4
+                  li
+                    a(href="#!") 5
+                  li
+                    span ...
+                  li
+                    a(href="#!") 99
+
+            
+            .col-sm-4
+              
+              // Recent
+              .recent
+                .recent__head
+                  span Recent Posts
+                
+                .recent__block
+                  img(src="./img/news-list-small-1.png", alt="")
+                  a(href="#!").recent__title WORLDWIDE SALES OF TOYOTA HYBRIDS SURPASS 10 MILLION UNITS
+                .recent__block
+                  img(src="./img/news-list-small-2.png", alt="")
+                  a(href="#!").recent__title NISSAN LAUNCHES ITS ALL-NEW CROSSOVER ‘KICKS’ ACROSS THE MIDDLE EAST
+                .recent__block
+                  img(src="./img/news-list-small-3.png", alt="")
+                  a(href="#!").recent__title Dubai auto parts and accessories trade valued at AED44.37 billion
+                .recent__block
+                  img(src="./img/news-list-small-4.png", alt="")
+                  a(href="#!").recent__title Mercedes in Abu Dhabi
+                .recent__block
+                  img(src="./img/news-list-small-5.png", alt="")
+                  a(href="#!").recent__title National Day &amp; Lambo
+                
+
+      
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom

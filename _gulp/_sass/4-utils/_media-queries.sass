@@ -16,6 +16,8 @@
   .header
     &__language
       margin-right: 0
+    &__nav-wrapper ul li + li
+      margin-left: 45px
   p
     margin-bottom: 23px
   .about__text-first
@@ -44,10 +46,124 @@
           padding-right: 10px
     &__logo
       transform: translate(-60px,-30px)
-
+  .contacts
+    &__text
+      margin-left: 35px
+      margin-right: 50px
+    &__form
+      margin-left: 0
+      margin-right: 32px
+      &--register-left
+        margin-right: 0
+        margin-left: 35px
+      &--register-right
+        margin-right: 35px
+  .map
+    transform: skewX(-5deg)
+    width: 910px
+    margin-left: 15px
+    &__body
+      transform: skewX(5deg)
+      margin-left: -15px
+    &--office
+      width: 645px
+      margin-left: -44px
+  .register
+    padding: 0 0 30px 0
+  .why
+    &__block
+      strong
+        max-width: 90%
+        display: inline-block
+  .about-us
+    &__text
+      margin-left: -30px
+  .office
+    &__text
+      .h1, h1
+        padding-right: 34px
+  .slider-svg
+    width: 950px
+    height: 492px
+    margin-top: -76px
+  .car-rent--1
+    width: 361px
+    height: 174px
+    background-size: 361px 174px
+    left: 0
+  .car-rent--2
+    width: 473px
+    height: 172px
+    background-size: 473px 172px
+  .car-rent--3
+    width: 361px
+    height: 174px
+    background-size: 361px 174px
+  .main-slider
+    margin-top: 135px
+    &__block
+      height: 430px
+      img
+        &.img-1
+          width: 700px
+        &.img-2
+          width: 780px
+        &.img-3
+          width: 700px
+  .car-rent
+    &--first, &--third
+      &>.span-1
+        height: 138px
+        width: 330px
+        padding-left: 34px
+        padding-top: 13px
+        &>span
+          small
+            font-size: rem(26)
+            &::after
+              font-size: rem(17)
+              margin-left: 10px
+          strong
+            font-size: rem(104)
+            margin-top: -10px
+      &>.span-2
+        height: 28px
+        line-height: 28px
+        margin-left: 11px
+        width: 132px
+        font-size: rem(14)
+    &--first
+      left: 16px
+    &--second
+      top: 24px
+      transform: translateX(-220px)
+      &>.span-1
+        width: 326px
+        padding-left: 43px
+        &>span
+          strong
+            letter-spacing: -9px
+      &>.span-2
+        margin-top: -180px
+        margin-left: 318px
+        width: 136px
+      &>.span-3
+        width: 124px
+        margin-left: 290px
+    &--third
+      right: 30px
+      &>.span-1
+        padding-left: 45px
+        &>span
+          strong
+            margin-left: -1px
+      &>.span-2
+        margin-left: 187px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
+  .h1, h1
+    font-size: rem(35)
   .header
     &__logo
       margin-left: 0
@@ -59,7 +175,7 @@
       ul
         li
           &+li
-            margin-left: 23px
+            margin-left: 19px
   .about
     &__text-first p
       margin-right: 0
@@ -95,8 +211,123 @@
           padding-right: 10px
     &__logo
       transform: translate(-96px,-30px)
+  .contacts
+    padding: 20px 0
+    &__text
+      margin-left: 0px
+      margin-right: 0px
+    &__form
+      margin-left: 0
+      margin-right: 0px
+      &--register-left
+        margin-left: 0px
+      &--register-right
+        margin-right: 0px
+  .map
+    width: 690px
+    &--office
+      width: 435px
+  .about-us
+    &__text
+      margin-left: -65px
+    &__img
+      padding-top: 110px
+  .office
+    padding-top: 30px
+  .why
+    padding-top: 0
+    padding-bottom: 70px
+  .slider-svg
+    width: 720px
+    height: 393px
+    margin-top: -76px
+  .car-rent--1
+    width: 277px
+    height: 133px
+    background-size: 277px 133px
+    left: 0
+  .car-rent--2
+    width: 363px
+    height: 117px
+    background-size: 363px 117px
+    top: 20px
+  .car-rent--3
+    width: 277px
+    height: 133px
+    background-size: 277px 133px
+    right: 5px
+  .main-slider
+    margin-top: 70px
+    &__block
+      height: 360px
+      img
+        &.img-1
+          left: 135px
+          top: 101px
+          width: 580px
+        &.img-2
+          width: 660px
+          top: 90px
+          left: 30px
+        &.img-3
+          width: 580px
+          top: 102px
+          left: 6px
+  .car-rent
+    &--first, &--second, &--third
+      &>.span-1
+        left: 12px
+        height: 106px
+        width: 253px
+        padding-left: 23px
+        padding-top: 10px
+        margin-bottom: 5px
+        &>span
+          small
+            font-size: rem(21)
+            &::after
+              font-size: rem(14)
+              margin-left: 10px
+          strong
+            font-size: rem(80)
+            margin-top: -10px
+      &>.span-2
+        height: 22px
+        line-height: 22px
+        margin-left: 20px
+        width: 102px
+        font-size: rem(11)
+    &--first
+      left: 0px
+    &--second
+      top: 31px
+      transform: translateX(-180px)
+      &>.span-1
+        width: 253px
+        padding-left: 43px
+        &>span
+          strong
+            letter-spacing: 0px
+      &>.span-2
+        margin-top: -122px
+        margin-left: 266px
+        width: 103px
+      &>.span-3
+        width: 90px
+        margin-left: 240px
+        margin-top: 4px
+        height: 87px
+    &--third
+      right: 32px
+      &>.span-1
+        padding-left: 36px
+        &>span
+          strong
+            margin-left: -1px
+      &>.span-2
+        margin-left: 151px
 
-@media (max-width: 767px) and (min-width: 991px)
+@media (min-width: 767px) and (max-width: 991px)
   .about
     &__img--first
       float: right
@@ -110,6 +341,28 @@
     &__text-second
       .list
         padding-left: 348px
+  body
+    counter-reset: recent-block
+  .recent
+    padding-right: 10px
+    &__block
+      img
+        display: none
+      padding-left: 0
+      min-height: 30px
+      &::after
+        counter-increment: recent-block
+        content: counter(recent-block)
+        position: absolute
+        color: #ffe9cd
+        font-size: rem(30)
+        font-family: $font-roboto-medium
+        right: -2px
+        top: -6px
+        line-height: 1
+        z-index: 5
+    &__title
+      z-index: 10
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -126,6 +379,10 @@
       &--big
         .h1, h1
           font-size: rem(54)
+          b
+            span
+              height: 68px
+              line-height: 68px
   .header
     height: 150px
     &__nav-wrapper
@@ -225,6 +482,177 @@
         font-size: rem(40)
       small
         padding: 0
+    &__logo
+      display: none
+  .contacts
+    padding: 20px 0
+    &__text
+      max-width: 350px
+      margin: 0 auto
+      padding-bottom: 10px
+    &__form
+      max-width: 350px
+      margin: 0 auto
+      &--register-mobile
+        max-width: 400px
+        padding-top: 10px
+        .btn
+          margin-right: auto
+          margin-left: auto
+    &__title
+      text-align: center
+    .btn
+      margin-right: auto
+  .map
+    transform: skewX(0)
+    width: 100%
+    margin-left: 0
+    &__body
+      transform: skewX(0)
+      height: 300px
+    &--office
+      margin-bottom: 25px
+      margin-top: -70px
+      border-radius: 5px
+  .pagination
+    margin-bottom: 50px
+  .recent
+    max-width: 360px
+    margin: 0 auto
+  .parts
+    &__block
+      width: 50%
+      margin-bottom: 30px
+      &:last-child
+        margin-left: 0
+        margin-bottom: 0
+  .register
+    padding-bottom: 0
+    background: none
+  .about-us
+    &__text
+      margin-left: 0px
+      text-align: center
+    &__img
+      padding-top: 0px
+      padding-bottom: 20px
+  .office
+    padding-bottom: 0
+    &__text
+      .h1, h1
+        text-align: left
+        br
+          display: none
+    &__block
+      padding: 15px 10px 15px 25px
+      transform: skewX(15deg)
+      margin-left: 15px
+      width: 360px
+      &>div
+        transform: skewX(-15deg)
+  .social
+    &--office
+      text-align: center
+      padding-left: 0
+  .slider-svg
+    width: 450px
+    height: 233px
+    margin: -60px auto 0
+    position: relative
+  .car-rent--1
+    width: 175px
+    height: 84px
+    background-size: 175px 84px
+    left: 0
+  .car-rent--2
+    width: 232px
+    height: 75px
+    background-size: 232px 75px
+    top: 20px
+  .car-rent--3
+    width: 175px
+    height: 84px
+    background-size: 175px 84px
+    right: 5px
+  .main-slider
+    margin: -155px auto 0
+    width: 450px
+    &__block
+      height: 250px
+      img
+        &.img-1
+          left: 87px
+          top: 85px
+          width: 360px
+        &.img-2
+          width: 425px
+          top: 65px
+          left: 13px
+        &.img-3
+          width: 360px
+          top: 86px
+          left: 6px
+  .car-rent
+    &--first, &--second, &--third
+      &>.span-1
+        left: 7px
+        height: 67px
+        width: 161px
+        padding-left: 17px
+        padding-top: 7px
+        margin-bottom: 3px
+        &>span
+          small
+            font-size: rem(13)
+            &::after
+              font-size: rem(9)
+              margin-left: 10px
+          strong
+            font-size: rem(51)
+            margin-top: -7px
+            margin-left: -3px
+      &>.span-2
+        height: 14px
+        line-height: 14px
+        margin-left: 13px
+        width: 64px
+        font-size: rem(6)
+    &--first
+      left: 0px
+      // opacity: 0.3
+    &--second
+      top: 27px
+      transform: translateX(-116px)
+      // opacity: 0.3
+      &>.span-1
+        width: 157px
+        padding-left: 21px
+        &>span
+          strong
+            letter-spacing: 0px
+            margin-top: -5px
+          small
+            &::after
+              vertical-align: 2px
+              margin-left: 10px
+      &>.span-2
+        margin-top: -77px
+        margin-left: 164px
+        width: 66px
+      &>.span-3
+        width: 70px
+        margin-left: 142px
+        margin-top: 3px
+        height: 54px
+    &--third
+      right: 19px
+      &>.span-1
+        padding-left: 23px
+        &>span
+          strong
+            margin-left: -1px
+      &>.span-2
+        margin-left: 95px
 
 @media (max-height: 320px) and (orientation: landscape)
   .header
@@ -235,17 +663,23 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
+  .h1, h1
+    font-size: rem(30)
   .section
     &__head
       &--big
         .h1, h1
           font-size: rem(46)
+          b
+            span
+              height: 57px
+              line-height: 57px
   .header
     height: 130px
     &__logo
       img
         width: 95px
-        height: 68px
+        height: 91px
     &__links
       margin-left: 20px
     &__button
@@ -269,6 +703,72 @@
           left: 0
           width: 140px
           top: 63px
+  .contacts
+    table
+      margin-bottom: 20px
+  .news
+    &__block
+      margin-bottom: 35px
+    &__title
+      font-size: rem(20)
+    &__date
+      display: block
+      left: 0
+      bottom: 0
+      margin-top: 10px
+  .parts
+    &__block
+      width: 100%
+      margin-left: 0
+  .why
+    &__block
+      font-size: rem(14)
+      img
+        max-width: 100%
+      strong
+        height: 40px
+  .office
+    &__text
+      .h1, h1
+        font-size: rem(40)
+    &__block
+      width: 266px
+      transform: skewX(7deg)
+      &>div
+        transform: skewX(-7deg)
+  .slider-svg
+    width: 290px
+    height: 150px
+    margin: -25px auto 0
+  .car-rent--1
+    top: 0
+  .car-rent--2
+    top: 0
+  .car-rent--3
+    top: 0
+  .main-slider
+    margin: -120px auto 0
+    width: 290px
+    &__block
+      height: 200px
+      img
+        &.img-1
+          left: 26px
+          top: 80px
+          width: 260px
+        &.img-2
+          width: 290px
+          top: 70px
+          left: 0px
+        &.img-3
+          width: 260px
+          top: 86px
+          left: 6px
+  .car-rent
+    &--first, &--third
+      top: 0
+    &--second
+      top: 10px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

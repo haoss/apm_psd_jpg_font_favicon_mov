@@ -1,2 +1,31 @@
 //- .loader
   .loader__block
+
+#register.popup.popup--register.mfp-hide
+  .popup__wrapper
+    i.ion-ios-close-empty.popup__close
+    .popup__title REGISTER NOW
+    
+    .form
+      form(action="#")
+        fieldset
+          .form-group.custom-input
+            label(for="input-name") Name
+            input#input-name(type="text" name="name" placeholder="Name").form-control
+            i.ion-alert-circled
+          .form-group.custom-input.has-error
+            label(for="input-email") Email
+            input#input-email(type="email" name="email" placeholder="Email").form-control
+            i.ion-alert-circled
+          .form-group.custom-input
+            label(for="input-phone") Phone
+            input#input-phone(type="phone" name="phone" placeholder="Phone").form-control
+            i.ion-alert-circled
+          .form-group.custom-input
+            label(for="input-message") Message
+            textarea#input-message(name="message" placeholder="Message").form-control
+            i.ion-alert-circled
+          
+          .text-center
+            button(type="button").btn.btn--blue
+              span Send

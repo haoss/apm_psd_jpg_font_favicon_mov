@@ -6,14 +6,15 @@
   // padding-bottom: 35px
   // box-shadow: 0 5px 5px rgba(0,0,0,.2)
   height: 158px
+  position: relative
+  z-index: 500
 
   &__logo
     float: left
     margin-left: 24px
     img
       width: 118px
-      height: 86px
-
+      height: 113px
   &__language
     float: right
     margin: 22px 12px 0 47px
@@ -67,8 +68,6 @@
           opacity: 1
           &.active
             top: 0
-
-
   &__links
     float: left
     margin-left: 53px
@@ -98,7 +97,6 @@
               font-family: $font-ionicons
               display: inline-block
               margin-left: 13px
-
   &__social
     display: none
     border-top: 1px solid #e2e2e2
@@ -113,12 +111,16 @@
       overflow: hidden
       text-align: center
       vertical-align: middle
+      opacity: 1
+      transition: opacity 0.35s
       &+a
         margin-left: 10px
       img
         display: block
         width: 30px
         height: 30px
+      &:hover
+        opacity: 0.6
 
   &__button
     display: none

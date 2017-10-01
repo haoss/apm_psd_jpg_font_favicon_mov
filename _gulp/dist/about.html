@@ -27,11 +27,43 @@
         <meta name="msapplication-config" content="./favicon/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
         <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="./js/libs/selectric/selectric.css">
+        <link rel="stylesheet" href="./js/libs/slick/slick.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
+        <!-- Preloader-->
+        <div id="register" class="popup popup--register mfp-hide">
+            <div class="popup__wrapper"><i class="ion-ios-close-empty popup__close"></i>
+                <div class="popup__title">REGISTER NOW</div>
+                <div class="form">
+                    <form action="#">
+                        <fieldset>
+                            <div class="form-group custom-input">
+                                <label for="input-name">Name</label>
+                                <input id="input-name" type="text" name="name" placeholder="Name" class="form-control"><i class="ion-alert-circled"></i>
+                            </div>
+                            <div class="form-group custom-input has-error">
+                                <label for="input-email">Email</label>
+                                <input id="input-email" type="email" name="email" placeholder="Email" class="form-control"><i class="ion-alert-circled"></i>
+                            </div>
+                            <div class="form-group custom-input">
+                                <label for="input-phone">Phone</label>
+                                <input id="input-phone" type="phone" name="phone" placeholder="Phone" class="form-control"><i class="ion-alert-circled"></i>
+                            </div>
+                            <div class="form-group custom-input">
+                                <label for="input-message">Message</label>
+                                <textarea id="input-message" name="message" placeholder="Message" class="form-control"></textarea><i class="ion-alert-circled"></i>
+                            </div>
+                            <div class="text-center">
+                                <button type="button" class="btn btn--blue"><span>Send</span></button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="base">
-            <!-- Preloader-->
             <!-- Header-->
             <header class="header">
                 <div class="container">
@@ -89,7 +121,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-7 col-lg-push-5 col-md-6 col-md-push-6 about__text-second"><img src="./img/about-logo-2.png" alt="" class="about__logo2 visible-sm">
-                            <div class="h3">Our Directions</div>
+                            <div class="h3 h3--intro">Our Directions</div>
                             <ul class="list list--mark">
                                 <li>Supplies from the warehouses all over the world</li>
                                 <li>Collective procurement;</li>
@@ -110,7 +142,7 @@
                     <!-- Brands-->
                     <div class="section brands">
                         <div class="section__head">
-                            <div class="h3">spare parts for brands</div>
+                            <div class="h3 h3--intro">spare parts for brands</div>
                         </div>
                         <div class="row">
                             <div class="col-md-6"><img src="./img/brands-1.png" alt="" class="img-responsive"></div>
@@ -137,9 +169,15 @@
         <script src='./js/libs/html5shiv/respond.min.js'><![endif]
         
         -->
-        <!-- Footer js-->
         <!-- Load Scripts-->
         <script src="./js/libs.js"></script>
+        <!-- Footer js-->
+        <script src="./js/libs/selectric/jquery.selectric.min.js"></script>
+        <script src="./js/libs/slick/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
         <script src="./js/common.js"></script>
     </body>
 </html>

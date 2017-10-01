@@ -1,12 +1,5 @@
 /* modules */
 
-/*!
- * Hamburgers
- * @description Tasty CSS-animated hamburgers
- * @author Jonathan Suh @jonsuh
- * @site https://jonsuh.com/hamburgers
- * @link https://github.com/jonsuh/hamburgers
-
 .hamburger
   padding: 15px 15px
   display: inline-block
@@ -787,3 +780,675 @@
     left: 50%
     z-index: 1
     transform: translate(-50px,-30px)
+
+// Contacts
+.contacts
+  &__text
+    margin-left: -30px
+    font-size: rem(14)
+    .name
+      font-size: rem(16)
+
+    table
+      margin-bottom: 30px
+      font-family: $font-roboto-medium
+      td
+        padding: 0px 10px 0px 0
+        line-height: 1.8
+        &:last-child
+          padding-right: 0
+        &:first-child
+          vertical-align: middle
+          text-align: center
+          width: 1px
+          color: #f1b350
+          vertical-align: top
+
+  &__form
+    margin: 0 -30px
+    .btn
+      display: block
+      margin-left: auto
+
+  &__title
+    font-size: rem(18)
+    margin-bottom: 20px
+    text-transform: uppercase
+    font-family: $font-intro
+    color: $primary-color
+
+  &__legend
+    color: #fdefe0
+    text-transform: uppercase
+    font-size: rem(40)
+    font-family: $font-intro
+    padding-left: 15px
+    line-height: 1
+    text-align: left
+    margin-bottom: -7px
+  &__form
+    &--register-right
+      .contacts__legend
+        text-align: right
+        padding-left: 0
+        padding-right: 15px
+      .btn
+        margin-left: 0
+        margin-right: auto
+
+// Register
+.register
+  background: url('../img/register-background.png') center center no-repeat
+  .section__head
+    .h1, h1
+      margin-bottom: 15px
+
+// Map
+.map
+  border: 3px solid $color-blue
+  width: 1088px
+  transform: skewX(-9deg)
+  border-radius: 12px
+  overflow: hidden
+  margin-left: 25px
+  margin-top: 15px
+  &__body
+    position: relative
+    height: 350px
+    transform: skewX(9deg)
+    width: calc(100% + 53px)
+    margin-left: -27px
+
+// Recent
+.recent
+  border: 2px solid #fdcc8d
+  border-radius: 5px
+  overflow: hidden
+  position: relative
+  margin-bottom: 20px
+  padding: 68px 18px 18px 18px
+  &__head
+    background: #fdcc8d
+    height: 49px
+    line-height: 49px
+    position: absolute
+    left: -10px
+    top: -3px
+    color: $color-white
+    font-size: rem(25)
+    text-transform: uppercase
+    font-family: $font-intro
+    padding: 0 18px 0 25px
+    transform: skewX(-13deg)
+    border-radius: 6px
+    white-space: nowrap
+    span
+      display: inline-block
+      transform: skewX(13deg)
+  &__block
+    position: relative
+    padding-left: 97px
+    min-height: 64px
+    &:not(:last-child)
+      margin-bottom: 16px
+    img
+      position: absolute
+      left: 0
+      border-radius: 3px
+  &__title
+    text-transform: uppercase
+    font-size: rem(13)
+    color: $primary-color
+    text-decoration: none
+    font-family: $font-roboto-medium
+    position: relative
+    top: -4px
+    line-height: 1.4
+    display: inline-block
+    &:hover
+      color: $color-blue
+
+// news
+.news
+  &__block
+    display: block
+    position: relative
+    text-decoration: none
+    font-size: rem(25)
+    text-transform: uppercase
+    font-family: $font-roboto
+    color: $primary-color
+    margin-bottom: 45px
+    &:hover
+      .news__date
+        color: $primary-color
+      .news__img
+        &::after
+          background: rgba($color-blue,0.7)
+    .news__date
+      position: absolute
+      background: $color-white
+      color: $primary-color
+      left: 18px
+      bottom: 21px
+      margin-top: 0
+      &::before
+        border-top-color: $color-white
+  &__img
+    position: relative
+    border-radius: 4px
+    overflow: hidden
+    margin-bottom: 20px
+    &::after
+      content: ''
+      z-index: 15
+      left: 0
+      bottom: 0
+      position: absolute
+      top: 0
+      right: 0
+      background: rgba($color-blue,0)
+      // opacity: 0
+      transition: background 0.35s
+    img
+      display: block
+  &__date
+    position: relative
+    z-index: 30
+    bottom: 14px
+    left: 10px
+    background: $color-blue
+    color: $color-white
+    font-size: rem(10)
+    text-transform: none
+    height: 21px
+    line-height: 21px
+    border-radius: 3px 3px 3px 0
+    padding: 0 0 0 11px
+    width: 90px
+    display: inline-block
+    font-family: $font-roboto
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      bottom: -6px
+      width: 0
+      height: 0
+      border-right: 6px solid transparent
+      border-top: 6px solid $color-blue
+  &__title
+    line-height: 1.2
+    padding-left: 18px
+
+// Pagination
+.pagination
+  font-size: rem(14)
+  font-family: $font-roboto-medium
+  text-align: center
+  margin-bottom: 20px
+  ul
+    margin: 0
+    padding: 0
+    display: inline-block
+    overflow: hidden
+    li
+      margin: 0 2px
+      list-style: none
+      float: left
+      &>a, &>span
+        height: 30px
+        width: 30px
+        line-height: 28px
+        text-align: center
+        color: $primary-color
+        text-decoration: none
+        display: block
+        background: $color-white
+        border: 1px solid $color-white
+        border-radius: 50%
+        overflow: hidden
+      &>a
+        &:hover
+          border-color: $color-blue
+          color: $color-blue
+      &.active
+        &>a,&>span
+          color: $color-white
+          background-color: $color-blue
+          border-color: $color-blue
+
+// Social row
+.social__row
+  img.img-responsive
+    margin: 0 auto
+  margin-bottom: 30px
+
+// Parts
+.parts
+  &__info
+    padding-top: 20px
+    padding-bottom: 30px
+    text-align: center
+  &__block
+    text-align: center
+    display: inline-block
+    vertical-align: top
+    width: 33.3%
+    &+.parts__block
+      margin-left: -0.36em
+
+  &__img
+    width: 126px
+    height: 126px
+    margin: 0 auto 22px
+    background: $color-blue
+    border-radius: 50%
+    overflow: hidden
+    position: relative
+    img
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+  &__title
+    color: #808080
+    font-size: rem(13)
+    max-width: 210px
+    margin: 0 auto
+    strong
+      font-family: $font-intro
+      color: $primary-color
+      font-size: rem(18)
+      display: block
+      line-height: 1
+      margin-bottom: 15px
+
+// Selectric
+.selectric
+  border: 2px solid #fdcc8d
+  background: $color-white
+  border-radius: 17px
+  .button
+    width: 35px
+    height: 30px
+    background: $color-white
+    &::after
+      content: "\f35e"
+      border: 0
+      color: #fba43d
+      font-size: rem(18)
+      font-family: $font-ionicons
+      top: 50%
+      left: 50%
+      right: inherit
+      bottom: inherit
+      margin: inherit
+      width: auto
+      transform: translate(-50%,-50%)
+  .label
+    line-height: 30px
+    height: 30px
+    margin-left: 18px
+  &-items
+    border: 2px solid #fdcc8d
+    background: $color-white
+    border-top: 0
+    padding-bottom: 10px
+    border-radius: 0 0 17px 17px
+    li
+      padding: 2px 18px
+      font-size: rem(14)
+      text-transform: uppercase
+      color: $primary-color
+      &.disabled
+        display: none
+      &.highlighted
+        background: none
+        color: #fdcc8d
+
+  &-open
+    .selectric
+      border-color: #fdcc8d
+      border-bottom: 0
+      background: $color-white
+      border-radius: 17px 17px 0 0
+      margin-bottom: 17px
+      .button
+        &::after
+          content: "\f364"
+
+  &-hover
+    .selectric
+      border-color: #fdcc8d
+  &-below
+    .label
+      // text-transform: uppercase
+
+// Why
+.why
+  padding: 115px 0
+  &__block
+    text-align: center
+    font-size: rem(18)
+    img
+      display: block
+      max-width: 170px
+      margin: 0 auto
+    strong
+      text-transform: uppercase
+      font-family: $font-intro
+      color: $color-blue
+
+// About us
+.about-us
+  padding-top: 0
+  &__text
+    text-align: right
+    .section__head
+      text-align: right
+  &__img
+    img
+      margin: 0 auto
+
+// Map
+.map
+  &--office
+    width: 840px
+    margin: 0 0 0 -20px
+
+.office
+  padding-bottom: 0
+  &__text
+    .h1, h1
+      text-align: right
+      margin-bottom: 15px
+    .name
+      font-size: rem(16)
+    table
+      font-family: $font-roboto-medium
+      td
+        padding: 0px 10px 0px 0
+        line-height: 1.8
+        &:last-child
+          padding-right: 0
+        &:first-child
+          vertical-align: middle
+          text-align: center
+          width: 1px
+          color: #b3781b
+          vertical-align: top
+  &__block
+    background: linear-gradient(to right, #ffe4bc, #ffa53b)
+    font-size: rem(14)
+    padding: 30px 0 30px 45px
+    transform: skewX(20deg)
+    width: 400px
+    position: relative
+    z-index: 50
+    margin-bottom: 25px
+    border-radius: 10px
+    margin-left: 25px
+    &>div
+      transform: skewX(-20deg)
+
+.social
+  text-align: center
+  &--office
+    text-align: left
+    padding-left: 65px
+  &>a
+    display: inline-block
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    overflow: hidden
+    text-align: center
+    vertical-align: middle
+    opacity: 1
+    transition: opacity 0.35s
+    &+a
+      margin-left: 10px
+    img
+      display: block
+      width: 40px
+      height: 40px
+    &:hover
+      opacity: 0.6
+
+// main slider
+.slick-dots
+  text-align: center
+  margin: 0
+  padding: 0
+  &>li
+    list-style: none
+    margin: 0 3px
+    vertical-align: middle
+    display: inline-block
+    button
+      font-size: 0
+      padding: 0
+      height: 14px
+      width: 14px
+      border: 1px solid $color-blue
+      background: $color-white
+      border-radius: 50%
+      display: block
+    &.slick-active
+      button
+        box-shadow: 0 0 0 3px $color-blue inset
+
+//
+.main-slider
+  position: relative
+  z-index: 200
+  margin-top: 155px
+  &__block
+    height: 490px
+    // background: pink
+    position: relative
+    img
+      position: absolute
+      max-width: 100%
+      height: auto
+      z-index: 25
+      &.img-1
+        left: 223px
+        top: 124px
+      &.img-3
+        top: 124px
+        left: 65px
+      &.img-2
+        top: 110px
+        left: 90px
+
+.car-rent
+  position: absolute
+  &--1
+    width: 409px
+    height: 196px
+    background: url('../img/car-slide-text-1.png') 0 0 no-repeat
+    top: 53px
+    left: 15px
+    opacity: 0.3
+  &--2
+    width: 533px
+    height: 172px
+    background: url('../img/car-slide-text-2.png') 0 0 no-repeat
+    left: 50%
+    transform: translateX(-50%)
+    top: 8px
+    // opacity: 0.3
+  &--3
+    width: 409px
+    height: 196px
+    background: url('../img/car-slide-text-3.png') 0 0 no-repeat
+    right: 15px
+    top: 53px
+    // opacity: 0.3
+  &--first, &--second, &--third
+    top: 53px
+    left: 33px
+    text-decoration: none
+    &>.span-1
+      height: 156px
+      transform: skewX(13deg)
+      display: block
+      margin-bottom: 8px
+      width: 373px
+      background: linear-gradient(to left, #0097ff, #00c8ff)
+      color: $color-white
+      border-radius: 4px
+      padding-left: 38px
+      padding-top: 15px
+      transition: background 0.35s
+      position: relative
+      z-index: 10
+      &>span
+        transform: skewX(-13deg)
+        display: inline-block
+        strong
+          font-size: rem(117)
+          font-family: $font-intro
+          line-height: 1
+          display: block
+          margin: -12px 0 0 -8px
+          transition: text-shadow 0.35s
+        small
+          font-size: rem(30)
+          font-family: $font-intro
+          display: block
+          line-height: 1
+          &::after
+            content: "\f30f"
+            font-family: $font-ionicons
+            font-size: rem(20)
+            vertical-align: 3px
+            margin-left: 11px
+    &>.span-2
+      transform: skewX(-18deg)
+      border-radius: 2px
+      color: $color-white
+      background: linear-gradient(to right, #0097ff, #00c8ff)
+      display: block
+      width: 148px
+      height: 32px
+      line-height: 32px
+      margin-left: 13px
+      text-align: center
+      font-size: rem(16)
+      font-family: $font-roboto-bold
+      text-transform: uppercase
+      transition: text-shadow 0.35s, background 0.35s
+      position: relative
+      z-index: 5
+      &>span
+        transform: skewX(18deg)
+        display: inline-block
+    &:hover
+      &>.span-1
+        background: linear-gradient(to left, #00c8ff, #00c8ff)
+        strong
+          text-shadow: 0 0 16px $color-white
+      &>.span-2
+        text-shadow: 0 0 16px $color-white
+        background: linear-gradient(to left, #00c8ff, #00c8ff)
+      &>.span-3
+        background: linear-gradient(to left, #00c8ff, #00c8ff)
+  &--first
+    &>.span-2
+      background: linear-gradient(to left, #0097ff, #00c8ff)
+  &--third
+    &>.span-1, &>.span-2
+      background: linear-gradient(to right, #0097ff, #00c8ff)
+    left: inherit
+    right: 33px
+    &>.span-1
+      transform: skewX(-13deg)
+      &>span
+        transform: skewX(13deg)
+    &>.span-2
+      transform: skewX(18deg)
+      margin-left: 213px
+      &>span
+        transform: skewX(-18deg)
+  &--second
+    top: 23px
+    left: 50%
+    transform: translateX(-249px)
+    &>.span-1
+      width: 366px
+      &>span
+        strong
+          letter-spacing: 2px
+    &>.span-2
+      margin-top: -179px
+      margin-left: 362px
+    &>.span-3
+      height: 128px
+      transform: skewX(-15deg)
+      background: linear-gradient(to right, #0097ff, #00c8ff)
+      position: relative
+      z-index: 5
+      // background: red
+      width: 150px
+      display: block
+      margin-left: 320px
+      margin-top: 6px
+      border-radius: 4px
+
+.slider-svg
+  margin-top: -100px
+  position: absolute
+  width: 1140px
+  height: 591px
+  z-index: 100
+  img
+    display: block
+    max-width: 100%
+    height: auto
+
+.slick-slide
+  &:focus
+    outline: none
+
+.popup
+  position: relative
+  background: $color-white
+  padding: 30px 23px 70px 23px
+  width: auto
+  max-width: 362px
+  margin: 20px auto
+  border-radius: 10px
+  overflow: hidden
+  box-shadow: 0 0 60px rgba($color-black,.25)
+  &--register
+    background-image: url('../img/popup-background.png')
+    background-position: left bottom
+    background-repeat: no-repeat
+  &__title
+    font-family: $font-intro
+    color: $primary-color
+    text-align: center
+    font-size: rem(25)
+    margin-bottom: 20px
+  &__close
+    position: absolute
+    right: 17px
+    top: 0px
+    font-size: rem(35)
+    color: #bdbdbd
+    line-height: 1
+    cursor: pointer
+    transition: color 0.35s
+    &:hover
+      color: $primary-color
+
+.mfp-bg
+  background: rgba($color-white,.8)
+
+#body
+  .header
+    top: -100%
+    opacity: 0

@@ -1,0 +1,83 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = '1 news' //активный пункт меню, список в header.jade
+  -var pageTitle = '1 news' + ' - APM Group' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+      
+      // Content
+      .content
+        .container
+            
+          .row
+            .col-sm-8
+              
+              h1 INTRODUCING PROJECT BLACK S
+                .news__date March 14, 2017
+              
+              .h3 An exploration of a new INFINITI high-performance model line
+              p Featuring Formula One-inspired technology, ‘Project Black S’ is an exploration of a new INFINITI high-performance model line. Developed in collaboration with the RenaultSport Formula One Team, Project Black S will be revealed for the first time globally at a special media event on the eve of the Geneva International Motor Show.
+              p A radical reinterpretation of the Q60 coupe, Project Black S features a stand-out, aerodynamic design, and hints at how a unique-for-the-road performance hybrid powertrain could significantly enhance the dynamics of an INFINITI production car.
+              p “INFINITI is the premium car manufacturer within the Renault-Nissan Alliance, and a technical partner to the Renault Sport Formula One Team, so it is natural that we come together to explore the possibility of bringing innovative high-performance hybrid technology to our customers. INFINITI has constantly led the way in making innovative new powertrain technology available, and we’re extremely excited by the potential of Project Black S.”
+              
+              p
+                img(src="./img/news-list-2.png", alt="").img-responsive
+              p
+                strong Roland Krueger, President of INFINITI
+              
+              p The performance hybrid powertrain being explored through Project Black S features an ‘energy recovery system’ (ERS) to harvest energy, deploying recovered electric power to boost power and torque. The result is instant, significant, lag-free acceleration. Inspired by the dual-hybrid system proven in Formula One, the technology does not yet exist in a current road car.
+
+              // Social row
+              .social__row
+                img(src="./img/social-row-1.png", alt="").img-responsive
+              .social__row
+                img(src="./img/social-row-2.png", alt="").img-responsive
+            
+            .col-sm-4
+              
+              // Recent
+              .recent
+                .recent__head
+                  span Recent Posts
+                
+                .recent__block
+                  img(src="./img/news-list-small-1.png", alt="")
+                  a(href="#!").recent__title WORLDWIDE SALES OF TOYOTA HYBRIDS SURPASS 10 MILLION UNITS
+                .recent__block
+                  img(src="./img/news-list-small-2.png", alt="")
+                  a(href="#!").recent__title NISSAN LAUNCHES ITS ALL-NEW CROSSOVER ‘KICKS’ ACROSS THE MIDDLE EAST
+                .recent__block
+                  img(src="./img/news-list-small-3.png", alt="")
+                  a(href="#!").recent__title Dubai auto parts and accessories trade valued at AED44.37 billion
+                .recent__block
+                  img(src="./img/news-list-small-4.png", alt="")
+                  a(href="#!").recent__title Mercedes in Abu Dhabi
+                .recent__block
+                  img(src="./img/news-list-small-5.png", alt="")
+                  a(href="#!").recent__title National Day &amp; Lambo
+                
+
+      
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom

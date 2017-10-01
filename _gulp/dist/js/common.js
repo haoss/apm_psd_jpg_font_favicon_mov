@@ -69,7 +69,8 @@ $(document).on('ready', function(){
 
   $('.open-popup-link').magnificPopup({
     type: 'inline',
-    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+    midClick: true,
+    showCloseBtn: false
   });
 
   var headerLanguage = $('.header__language'),
@@ -91,8 +92,12 @@ $(document).on('ready', function(){
   });
   $('.header__nav-wrapper').on('click', function(e){
     e.stopPropagation();
-  })
+  });
 
+  $('select.selectric').selectric({
+    disableOnMobile: false,
+    nativeOnMobile: false
+  });
 
   $(document).on('click', function(){
 
@@ -110,6 +115,18 @@ $(document).on('ready', function(){
 
     }
 
+  });
+
+  $('.main-slider').slick({
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false
+  });
+
+  $(document).on('click', '.popup__close', function(){
+    $.magnificPopup.close();
   });
 
   // Chrome Smooth Scroll
@@ -268,4 +285,29 @@ function simpleForm(form, callback) {
 
 $(document).ready(function() {
 	$('.custom-input input').phAnim();
+	$('.custom-input textarea').phAnim();
 });
+
+function scrollAnimation(){
+  var controller = new ScrollMagic.Controller(),
+      header = $('#body .header'),
+      headerTl = new TimelineMax(),
+      typeTl = new TimelineMax()
+  ;
+
+  // 1 scene
+  headerTl
+    .to(header, 1.5, {autoAlpha: 1, top: 0, ease:Power1.easeOut})
+  ;
+
+  var headerScene = new ScrollMagic.Scene({
+      triggerElement: header
+    })
+    .setTween(headerTl)
+    .addIndicators({name: "pin scene", colorEnd: "#FFFFFF"})
+    .addTo(controller);
+
+  // console.log('test');
+}
+
+$(document).ready(scrollAnimation);

@@ -30,6 +30,8 @@ body
 .base
   transform: translateX(0)
   transition: transform 0.35s
+  height: 100%
+  width: 100%
 
 body
   background: $color-white
@@ -48,13 +50,13 @@ body
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
   color: $primary-color
   font-weight: normal
-  font-family: $font-roboto-bold
+  font-family: $font-roboto
   text-decoration: none
   margin: 0 0 26px 0
 
 .h1, h1
   font-size: rem(50)
-  line-height: 1.2
+  line-height: 1
   letter-spacing: -1px
   font-family: $font-intro
 
@@ -66,24 +68,21 @@ body
 .h3, h3
   font-size: rem(25)
   line-height: 1.38
-  font-family: $font-intro
+  &--intro
+    font-family: $font-intro
 
 .h4, h4
   font-size: rem(21)
   line-height: 1.38
-
-  &--intro
-    font-family: $font-intro
-    font-size: rem(20)
-    text-transform: uppercase
-    // color: $color-blue
-    margin-bottom: 15px
+  margin-bottom: 20px
 
 .h5, h5
   font-size: rem(18)
+  margin-bottom: 20px
 
 .h6, h6
   font-size: rem(16)
+  margin-bottom: 20px
 
 .small, small
   font-size: rem(12)
@@ -154,20 +153,20 @@ a.link
   z-index: 10000
   background-color: $color-white
   &__block
-    background: $color-black
+    background: $color-darkorange
     animation: load1 1s infinite ease-in-out
     width: 1em
     height: 4em
     position: absolute
     top: 50%
     left: 50%
-    color: $color-black
+    color: $color-darkorange
     text-indent: -9999em
     font-size: 11px
     animation-delay: -0.16s
     transition: transform(-50%,-50%)
     &:before, &:after
-      background: $color-black
+      background: $color-darkorange
       animation: load1 1s infinite ease-in-out
       width: 1em
       height: 4em
@@ -231,7 +230,22 @@ a.link
     text-align: center
     &--big
       .h1, h1
+        line-height: 1.2
         font-size: rem(70)
+        b
+          background: $color-blue
+          transform: skewX(-10deg)
+          color: $color-white
+          font-family: $font-intro
+          padding: 0 25px
+          display: inline-block
+          margin-left: 15px
+          border-radius: 10px
+          span
+            transform: skewX(10deg)
+            display: inline-block
+            height: 90px
+            line-height: 90px
 
 ul li
   list-style-type: disc

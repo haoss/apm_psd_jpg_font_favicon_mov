@@ -1,0 +1,166 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Parts' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Parts' + ' - APM Group' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+      
+      // Content
+      .content
+        .container
+          
+          .section__head.section__head--big
+            h1 Parts
+          
+          .text-center
+            p In order to make the first order you must contact the manager of the company. The manager will give detailed information about the range, special offers, discounts, promotions, order to conclude the contract and delivery, warranty and return.
+            
+          // Parts
+          .section.parts__info
+            .parts__block
+              .parts__img
+                img(src="./img/parts-info-1.png", alt="")
+              .parts__title
+                strong SIMPLE
+                | Convenient service and high quality customer service
+                
+            .parts__block
+              .parts__img
+                img(src="./img/parts-info-2.png", alt="")
+              .parts__title
+                strong Fast
+                | Fast delivery
+                
+            .parts__block
+              .parts__img
+                img(src="./img/parts-info-3.png", alt="")
+              .parts__title
+                strong profitable
+                | Best prices
+            
+          // Type
+          .section.type.hidden-sm.hidden-xs
+            .type__body
+              img.type__logo(src="./img/type-logo.png", alt="")
+              a(href="#!").type__link.type__link--first
+                strong SUPPLIERS
+                small Press here for more details
+                img.type__img.type__img--first(src="./img/type-img-1.png", alt="")
+              a(href="#!").type__link.type__link--second
+                strong CLIENTS
+                small Press here for more details
+                img.type__img.type__img--second(src="./img/type-img-2.png", alt="")
+                  
+          // Register
+          .section.register
+            
+            .section__head.section__head--big
+              .h1 REGISTER NOW!
+            
+            .row.hidden-xs
+              .col-lg-4.col-lg-offset-1.col-sm-6
+                .contacts__form.contacts__form--register-left
+                  .contacts__legend suplpliers
+                  .form
+                    form(action="#")
+                      fieldset
+                        .form-group.custom-input
+                          label(for="input-name") Name
+                          input#input-name(type="text" name="name" placeholder="Name").form-control
+                          i.ion-alert-circled
+                        .form-group.custom-input
+                          label(for="input-email") Email
+                          input#input-email(type="email" name="email" placeholder="Email").form-control
+                          i.ion-alert-circled
+                        .form-group.custom-input
+                          label(for="input-phone") Phone
+                          input#input-phone(type="phone" name="phone" placeholder="Phone").form-control
+                          i.ion-alert-circled
+                        .form-group.custom-input
+                          label(for="input-message") Message
+                          textarea#input-message(name="message" placeholder="Message").form-control
+                          i.ion-alert-circled
+                        
+                        button(type="button").btn.btn--blue
+                          span Send
+                          
+              .col-lg-4.col-lg-offset-2.col-sm-6
+                .contacts__form.contacts__form--register-right
+                  .contacts__legend clients
+                  .form
+                    form(action="#")
+                      fieldset
+                        .form-group.custom-input
+                          label(for="input-name") Name
+                          input#input-name(type="text" name="name" placeholder="Name").form-control
+                          i.ion-alert-circled
+                        .form-group.custom-input
+                          label(for="input-email") Email
+                          input#input-email(type="email" name="email" placeholder="Email").form-control
+                          i.ion-alert-circled
+                        .form-group.custom-input
+                          label(for="input-phone") Phone
+                          input#input-phone(type="phone" name="phone" placeholder="Phone").form-control
+                          i.ion-alert-circled
+                        .form-group.custom-input
+                          label(for="input-message") Message
+                          textarea#input-message(name="message" placeholder="Message").form-control
+                          i.ion-alert-circled
+                        
+                        button(type="button").btn.btn--blue
+                          span Send
+            
+            .visible-xs
+              .contacts__form.contacts__form--register-mobile
+                .form
+                  form(action="#")
+                    fieldset
+                      .form-group
+                        select.selectric
+                          option(value="Choose who you are" disabled selected) Choose who you are
+                          option(value="suppliers") Suppliers
+                          option(value="clients") Clients
+                      .form-group.custom-input
+                        label(for="input-name") Name
+                        input#input-name(type="text" name="name" placeholder="Name").form-control
+                        i.ion-alert-circled
+                      .form-group.custom-input
+                        label(for="input-email") Email
+                        input#input-email(type="email" name="email" placeholder="Email").form-control
+                        i.ion-alert-circled
+                      .form-group.custom-input
+                        label(for="input-phone") Phone
+                        input#input-phone(type="phone" name="phone" placeholder="Phone").form-control
+                        i.ion-alert-circled
+                      .form-group.custom-input
+                        label(for="input-message") Message
+                        textarea#input-message(name="message" placeholder="Message").form-control
+                        i.ion-alert-circled
+                      
+                      button(type="button").btn.btn--blue
+                        span Send
+      
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom
+    

@@ -27,11 +27,43 @@
         <meta name="msapplication-config" content="./favicon/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
         <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="./js/libs/selectric/selectric.css">
+        <link rel="stylesheet" href="./js/libs/slick/slick.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
+        <!-- Preloader-->
+        <div id="register" class="popup popup--register mfp-hide">
+            <div class="popup__wrapper"><i class="ion-ios-close-empty popup__close"></i>
+                <div class="popup__title">REGISTER NOW</div>
+                <div class="form">
+                    <form action="#">
+                        <fieldset>
+                            <div class="form-group custom-input">
+                                <label for="input-name">Name</label>
+                                <input id="input-name" type="text" name="name" placeholder="Name" class="form-control"><i class="ion-alert-circled"></i>
+                            </div>
+                            <div class="form-group custom-input has-error">
+                                <label for="input-email">Email</label>
+                                <input id="input-email" type="email" name="email" placeholder="Email" class="form-control"><i class="ion-alert-circled"></i>
+                            </div>
+                            <div class="form-group custom-input">
+                                <label for="input-phone">Phone</label>
+                                <input id="input-phone" type="phone" name="phone" placeholder="Phone" class="form-control"><i class="ion-alert-circled"></i>
+                            </div>
+                            <div class="form-group custom-input">
+                                <label for="input-message">Message</label>
+                                <textarea id="input-message" name="message" placeholder="Message" class="form-control"></textarea><i class="ion-alert-circled"></i>
+                            </div>
+                            <div class="text-center">
+                                <button type="button" class="btn btn--blue"><span>Send</span></button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="base">
-            <!-- Preloader-->
             <!-- Header-->
             <header class="header">
                 <div class="container">
@@ -81,39 +113,180 @@
                         <p>Feel free to come and visit us, give us a call, email us or complete your details on the contact form below.</p>
                     </div>
                     <!-- Contants-->
-                    <div class="section">
+                    <div class="section contacts">
                         <div class="row">
-                            <div class="col-md-5 col-md-offset-1">
-                                <div class="h5">Contact Information</div>
+                            <div class="col-lg-5 col-lg-offset-1 col-sm-6">
+                                <div class="contacts__text">
+                                    <div class="contacts__title">Contact Information</div>
+                                    <table>
+                                        <tr>
+                                            <td><i class="ion-ios-location"></i></td>
+                                            <td> <strong class="name">UAE, Dubai World Central, Dubai South</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="ion-android-call"></i></td>
+                                            <td>00971 52 872 8887</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="ion-android-call"></i></td>
+                                            <td>00971 52 450 4739</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="ion-android-mail"></i></td>
+                                            <td>info@apm.group</td>
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            <td><i class="ion-clock"></i></td>
+                                            <td>Our office opening hours are:<br>Mon to Fri 8am - 6pm<br>Sat 9am - 5pm</td>
+                                        </tr>
+                                    </table>
+                                    <p>Whatever your car leasing needs - we'll always find the best package for you.</p>
+                                </div>
                             </div>
-                            <div class="col-md-4 col-md-offset-1">
-                                <div class="h5">Enquiry form</div>
-                                <div class="form">
-                                    <form action="#">
-                                        <fieldset>
-                                            <div class="form-group custom-input">
-                                                <label for="input-name">Name</label>
-                                                <input id="input-name" type="text" name="name" placeholder="Name" class="form-control">
-                                            </div>
-                                            <div class="form-group custom-input">
-                                                <label class="hidden">Email</label>
-                                                <input type="email" name="email" placeholder="Email" class="form-control">
-                                            </div>
-                                            <div class="form-group custom-input">
-                                                <label class="hidden">Phone</label>
-                                                <input type="phone" name="phone" placeholder="Phone" class="form-control">
-                                            </div>
-                                            <div class="form-group custom-input">
-                                                <label class="hidden">Message</label>
-                                                <textarea name="message" placeholder="Message" class="form-control"></textarea>
-                                            </div>
-                                            <button type="button" class="btn btn--blue"><span>Send</span></button>
-                                        </fieldset>
-                                    </form>
+                            <div class="col-lg-4 col-lg-offset-1 col-sm-6">
+                                <div class="contacts__form">
+                                    <div class="contacts__title">Enquiry form</div>
+                                    <div class="form">
+                                        <form action="#">
+                                            <fieldset>
+                                                <div class="form-group custom-input has-error">
+                                                    <label for="input-name">Name</label>
+                                                    <input id="input-name" type="text" name="name" placeholder="Name" class="form-control"><i class="ion-alert-circled"></i>
+                                                </div>
+                                                <div class="form-group custom-input">
+                                                    <label for="input-email">Email</label>
+                                                    <input id="input-email" type="email" name="email" placeholder="Email" class="form-control"><i class="ion-alert-circled"></i>
+                                                </div>
+                                                <div class="form-group custom-input">
+                                                    <label for="input-phone">Phone</label>
+                                                    <input id="input-phone" type="phone" name="phone" placeholder="Phone" class="form-control"><i class="ion-alert-circled"></i>
+                                                </div>
+                                                <div class="form-group custom-input">
+                                                    <label for="input-message">Message</label>
+                                                    <textarea id="input-message" name="message" placeholder="Message" class="form-control"></textarea><i class="ion-alert-circled"></i>
+                                                </div>
+                                                <button type="button" class="btn btn--blue"><span>Send</span></button>
+                                            </fieldset>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Map-->
+                    <div class="map">
+                        <div id="map_canvas" class="map__body"></div>
+                    </div>
+                    <!-- Google Map-->
+                    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+                    <script>
+                        function initialize() {
+                        var myLatlng = new google.maps.LatLng(24.9246382,55.04397);
+                        var map_options = {
+                          zoom: 12,
+                          mapTypeId: google.maps.MapTypeId.ROADMAP,
+                          center: myLatlng,
+                          scrollwheel: false,
+                          disableDefaultUI: true
+                        }
+                        var map = new google.maps.Map(document.getElementById('map_canvas'), map_options)
+                        var myIcon = new google.maps.MarkerImage('./img/map-icon.png', null, null, null, new google.maps.Size(113,147));
+                        var marker = new google.maps.Marker({
+                          position: myLatlng,
+                          map: map,
+                          icon: myIcon
+                        });
+                        /* Remove if you dont want B/W Google Map */
+                        
+                        var styles = [
+                            {
+                                "featureType": "administrative",
+                                "elementType": "labels.text.fill",
+                                "stylers": [
+                                    {
+                                        "color": "#444444"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "landscape",
+                                "elementType": "all",
+                                "stylers": [
+                                    {
+                                        "color": "#f2f2f2"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "poi",
+                                "elementType": "all",
+                                "stylers": [
+                                    {
+                                        "visibility": "off"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road",
+                                "elementType": "all",
+                                "stylers": [
+                                    {
+                                        "saturation": -100
+                                    },
+                                    {
+                                        "lightness": 45
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road.highway",
+                                "elementType": "all",
+                                "stylers": [
+                                    {
+                                        "visibility": "simplified"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road.arterial",
+                                "elementType": "labels.icon",
+                                "stylers": [
+                                    {
+                                        "visibility": "off"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "transit",
+                                "elementType": "all",
+                                "stylers": [
+                                    {
+                                        "visibility": "off"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "water",
+                                "elementType": "all",
+                                "stylers": [
+                                    {
+                                        "color": "#46bcec"
+                                    },
+                                    {
+                                        "visibility": "on"
+                                    }
+                                ]
+                            }
+                        ];
+                        map.setOptions({styles: styles});
+                        
+                        }
+                        google.maps.event.addDomListener(window, 'load', initialize);
+                    </script>
+                    <!-- Google Map Ends!-->
+                    
                 </div>
             </div>
             <!-- Footer-->
@@ -122,7 +295,6 @@
                     <div class="footer__copyright">© 2017 by Auto Parts Market. </div>
                 </div>
             </footer>
-            <div style="height: 1000px; background-color: #000"></div>
         </div>
         <!--[if gte IE 9]
         <script src='./js/libs/html5shiv/es5-shim.min.js'>
@@ -131,9 +303,15 @@
         <script src='./js/libs/html5shiv/respond.min.js'><![endif]
         
         -->
-        <!-- Footer js-->
         <!-- Load Scripts-->
         <script src="./js/libs.js"></script>
+        <!-- Footer js-->
+        <script src="./js/libs/selectric/jquery.selectric.min.js"></script>
+        <script src="./js/libs/slick/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
         <script src="./js/common.js"></script>
     </body>
 </html>

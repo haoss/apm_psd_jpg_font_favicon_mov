@@ -160,6 +160,8 @@
             margin-left: -1px
       &>.span-2
         margin-left: 187px
+  .slick-slide.slick-active .main-slider__block .car-rent--second
+    transform: translateX(-220px) translateY(0px)
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -242,6 +244,10 @@
     width: 720px
     height: 393px
     margin-top: -76px
+    #svg
+      display: none
+    // img
+    //   display: block
   .car-rent--1
     width: 277px
     height: 133px
@@ -328,6 +334,24 @@
             margin-left: -1px
       &>.span-2
         margin-left: 151px
+  .car-rent--second, .car-rent--first, .car-rent--third
+    transition: none
+  .main-slider__block
+    img
+      &.img-1, &.img-2, &.img-3
+        transition: none
+  .slick-slide.slick-active .main-slider__block .car-rent--second
+    transform: translateX(-180px) translateY(0px)
+  .cloud-animate
+    display: none
+    .cloud
+      &-1, &-2, &-3
+        animation: none
+        display: none
+  .bg_no_clouds
+    display: none !important
+  .cloud-mobile
+    display: block !important
 
 @media (min-width: 767px) and (max-width: 991px)
   .about
@@ -366,9 +390,12 @@
     &__title
       z-index: 10
 
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 
+  .content
+    overflow: inherit
   .animated
     transition-property: none !important
     transform: none !important
@@ -580,7 +607,7 @@
     margin: -155px auto 0
     width: 450px
     .slick-slide
-      padding-top: 50px
+      padding-top: 0px
     &__block
       height: 250px
       img
@@ -657,6 +684,8 @@
             margin-left: -1px
       &>.span-2
         margin-left: 95px
+  .slick-slide.slick-active .main-slider__block .car-rent--second
+    transform: translateX(-116px) translateY(0px)
 
 @media (max-height: 320px) and (orientation: landscape)
   .header

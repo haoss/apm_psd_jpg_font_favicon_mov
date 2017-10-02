@@ -1439,6 +1439,48 @@
     display: block
     max-width: 100%
     height: auto
+  .cloud-mobile
+    display: none
+
+.cloud-animate
+  position: relative
+  .cloud
+    &-1, &-2, &-3
+      position: absolute
+      z-index: 100
+    &-1
+      width: 72px
+      height: 41px
+      top: 139px
+      animation: moveClouds1 21s linear infinite
+    &-2
+      width: 57px
+      height: 24px
+      top: 220px
+      animation: moveClouds2 25s linear infinite
+      left: 75%
+    &-3
+      width: 83px
+      height: 48px
+      top: 60px
+      animation: moveClouds3 11s linear infinite
+      left: 65%
+
+@keyframes moveClouds1
+  0%
+    left: 0%
+  100%
+    left: 100%
+@keyframes moveClouds2
+  0%
+    left: 100%
+  100%
+    left: 0%
+@keyframes moveClouds3
+  0%
+    left: 100%
+  100%
+    left: 0%
 
 .slick-slide
   &:focus
@@ -1502,74 +1544,61 @@
   background: rgba($color-white,.8)
 
 // svg
-#svg .path
-  stroke-dasharray: 6
-  stroke-dashoffset: 600
-  animation: dash 60s linear infinite
-#svg .path1
-  stroke-dasharray: 4
-  stroke-dashoffset: 600
-  animation: dash 40s linear infinite
-#svg .path2
-  stroke-dasharray: 2
-  stroke-dashoffset: 600
-  animation: dash 120s linear infinite
-#svg .path3
-  stroke-dasharray: 2
-  stroke-dashoffset: 600
-  animation: dash 150s linear alternate infinite
-
-@keyframes dash
-  from
-    stroke-dashoffset: 600
-  to
-    stroke-dashoffset: 0
-
-#svg .path7
-  stroke-dasharray: 95 3
-  stroke-dashoffset: 900
-  animation: dash 50s linear alternate infinite
-
-@keyframes dash
-  from
-    stroke-dashoffset: 600
-  to
-    stroke-dashoffset: 0
-
-#svg .path4
-  stroke-dasharray: 2
-  stroke-dashoffset: 100
-  animation: dash 15s linear infinite
-#svg .path6
-  stroke-dasharray: 1
-  stroke-dashoffset: 600
-  animation: dash 120s linear infinite
-
-#cloud1
-  position: absolute
-  z-index: 10
-  animation: moveClouds1 30s linear infinite
-#cloud3
-  position: absolute
-  z-index: 10
-  animation: moveClouds2 28s linear infinite
-#cloud2
-  position: absolute
-  z-index: 10
-  animation: moveClouds3 25s linear infinite
-
-@keyframes moveClouds1
-  0%
-    transform: translateX(120px)
-  100%
-    transform: translateX(-550px)
-@keyframes moveClouds2
-  0%
-    transform: translateX(-100px)
-  100%
-    transform: translateX(550px)
-@keyframes moveClouds3
-  0%
-    transform: translateX(100px)
-  100%
-    transform: translateX(-550px)
+// #svg .path
+//   stroke-dasharray: 6
+//   stroke-dashoffset: 600
+//   animation: dash 60s linear infinite
+// #svg .path1
+//   stroke-dasharray: 4
+//   stroke-dashoffset: 600
+//   animation: dash 40s linear infinite
+// #svg .path2
+//   stroke-dasharray: 2
+//   stroke-dashoffset: 600
+//   animation: dash 120s linear infinite
+// #svg .path3
+//   stroke-dasharray: 2
+//   stroke-dashoffset: 600
+//   animation: dash 150s linear alternate infinite
+//
+// @keyframes dash
+//   from
+//     stroke-dashoffset: 600
+//   to
+//     stroke-dashoffset: 0
+//
+// #svg .path7
+//   stroke-dasharray: 95 3
+//   stroke-dashoffset: 900
+//   animation: dash 50s linear alternate infinite
+//
+// @keyframes dash
+//   from
+//     stroke-dashoffset: 600
+//   to
+//     stroke-dashoffset: 0
+//
+// #svg .path4
+//   stroke-dasharray: 2
+//   stroke-dashoffset: 100
+//   animation: dash 15s linear infinite
+// #svg .path6
+//   stroke-dasharray: 1
+//   stroke-dashoffset: 600
+//   animation: dash 120s linear infinite
+//
+// #cloud1
+//   position: absolute
+//   z-index: 10
+//   display: none
+//   // animation: moveClouds1 30s linear infinite
+// #cloud3
+//   position: absolute
+//   z-index: 10
+//   display: none
+//   // animation: moveClouds2 28s linear infinite
+// #cloud2
+//   position: absolute
+//   z-index: 10
+//   display: none
+//   // animation: moveClouds3 25s linear infinite

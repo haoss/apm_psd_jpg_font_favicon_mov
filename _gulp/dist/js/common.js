@@ -125,11 +125,33 @@ $(document).on('ready', function(){
     slidesToScroll: 1,
     dots: true,
     arrows: false,
-    fade: true
+    fade: true,
+    speed: 2000,
+    fade: true,
+    cssEase: 'ease'
+    // autoplay: true,
+    // autoplaySpeed: 2000
+  });
+
+  // On before slide change
+  $('.main-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    var active = currentSlide;
+    $('.header__links li').removeClass('active');
+    $('.header__links li').eq(nextSlide).addClass('active')
   });
 
   $(document).on('click', '.popup__close', function(){
     $.magnificPopup.close();
+  });
+
+  $('.header__links li a').each(function(){
+    var _this = $(this);
+
+    _this.on('click', function(e){
+      e.preventDefault();
+      var dataItem = _this.data('item');
+      $('.slick-dots li button').eq(dataItem).trigger('click');
+    })
   });
 
   function initScrollMagic(){
@@ -147,12 +169,15 @@ $(document).on('ready', function(){
     ;
     var typeScene = new ScrollMagic.Scene({
       triggerElement: '#body .type',
-      triggerHook: 0.7,
+      triggerHook: 0.8,
       reverse: false
   	})
   		.setTween(typeTl)
   		// .addIndicators({
-      //   name: 'type'
+      //   name: 'type',
+      //   colorStart: 'red',
+      //   colorEnd: 'red',
+      //   colorTrigger: 'red'
       // })
   		.addTo(controller)
     ;
@@ -163,12 +188,15 @@ $(document).on('ready', function(){
     ;
     var whyScene = new ScrollMagic.Scene({
       triggerElement: '#body .why',
-      triggerHook: 0.5,
+      triggerHook: 0.8,
       reverse: false
     })
       .setTween(whyTl)
       // .addIndicators({
-      //   name: 'why'
+      //   name: 'why',
+      //   colorStart: 'blue',
+      //   colorEnd: 'blue',
+      //   colorTrigger: 'blue'
       // })
       .addTo(controller)
     ;
@@ -180,12 +208,15 @@ $(document).on('ready', function(){
     ;
     var whyScene = new ScrollMagic.Scene({
       triggerElement: '#body .about-us',
-      triggerHook: 0.5,
+      triggerHook: 0.7,
       reverse: false
     })
       .setTween(aboutUsTl)
       // .addIndicators({
-      //   name: 'about-us'
+      //   name: 'about-us',
+      //   colorStart: 'green',
+      //   colorEnd: 'green',
+      //   colorTrigger: 'green'
       // })
       .addTo(controller)
     ;
@@ -197,12 +228,15 @@ $(document).on('ready', function(){
     ;
     var whyScene = new ScrollMagic.Scene({
       triggerElement: '#body .office',
-      triggerHook: 0.5,
+      triggerHook: 0.7,
       reverse: false
     })
       .setTween(officeTl)
       // .addIndicators({
-      //   name: 'about-us'
+      //   name: 'office',
+      //   colorStart: 'blue',
+      //   colorEnd: 'blue',
+      //   colorTrigger: 'blue'
       // })
       .addTo(controller)
     ;
@@ -409,5 +443,5 @@ $(document).ready(function() {
 });
 
 function drawSvg(){
-  
+
 }

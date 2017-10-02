@@ -2,6 +2,8 @@
 
 // Document ready
 $(document).on('ready', function(){
+  var controller = null;
+  var width = $(window).width()
 
   // E-mail Ajax Send
   // Documentation & Example: https://github.com/agragregra/uniMail
@@ -118,16 +120,135 @@ $(document).on('ready', function(){
   });
 
   $('.main-slider').slick({
-    infinite: false,
+    infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
-    arrows: false
+    arrows: false,
+    fade: true
   });
 
   $(document).on('click', '.popup__close', function(){
     $.magnificPopup.close();
   });
+
+  function initScrollMagic(){
+    var controller = new ScrollMagic.Controller();
+
+    var typeTl = new TimelineMax();
+    typeTl
+      .from($('#body .type'), 0.7, {autoAlpha: 0, y: 50, ease:Power3.easeOut})
+      .from($('#body .type .type__img--first'), 1, {autoAlpha: 0, x: 50, ease:Power1.easeOut}, 'auto')
+      .from($('#body .type .type__img--second'), 1, {autoAlpha: 0, x: '-50', ease:Power1.easeOut}, 'auto')
+      .from($('#body .type .type__link--first strong'), 1, {autoAlpha: 0, x: '-150', ease:Power1.easeOut}, 'auto2')
+      .from($('#body .type .type__link--first small'), 1, {autoAlpha: 0, x: '-150', ease:Power1.easeOut}, 'auto2')
+      .from($('#body .type .type__link--second strong'), 1, {autoAlpha: 0, x: 150, ease:Power1.easeOut}, 'auto2')
+      .from($('#body .type .type__link--second small'), 1, {autoAlpha: 0, x: 150, ease:Power1.easeOut}, 'auto2')
+    ;
+    var typeScene = new ScrollMagic.Scene({
+      triggerElement: '#body .type',
+      triggerHook: 0.7,
+      reverse: false
+  	})
+  		.setTween(typeTl)
+  		// .addIndicators({
+      //   name: 'type'
+      // })
+  		.addTo(controller)
+    ;
+
+    var whyTl = new TimelineMax();
+    whyTl
+      .from($('#body .why'), 1.5, {autoAlpha: 0, y: 150, ease:Power1.easeOut})
+    ;
+    var whyScene = new ScrollMagic.Scene({
+      triggerElement: '#body .why',
+      triggerHook: 0.5,
+      reverse: false
+    })
+      .setTween(whyTl)
+      // .addIndicators({
+      //   name: 'why'
+      // })
+      .addTo(controller)
+    ;
+
+    var aboutUsTl = new TimelineMax();
+    aboutUsTl
+      .from($('#body .about-us .about-us__img'), 1.5, {autoAlpha: 0, x: '-200', ease:Power1.easeOut}, 'start')
+      .from($('#body .about-us .about-us__text'), 1.5, {autoAlpha: 0, x: 200, ease:Power1.easeOut}, 'start')
+    ;
+    var whyScene = new ScrollMagic.Scene({
+      triggerElement: '#body .about-us',
+      triggerHook: 0.5,
+      reverse: false
+    })
+      .setTween(aboutUsTl)
+      // .addIndicators({
+      //   name: 'about-us'
+      // })
+      .addTo(controller)
+    ;
+
+    var officeTl = new TimelineMax();
+    officeTl
+      .from($('#body .office__text'), 1.5, {autoAlpha: 0, x: '-200', ease:Power1.easeOut}, 'start')
+      .from($('#body .map--office'), 1.5, {autoAlpha: 0, x: 200, ease:Power1.easeOut}, 'start')
+    ;
+    var whyScene = new ScrollMagic.Scene({
+      triggerElement: '#body .office',
+      triggerHook: 0.5,
+      reverse: false
+    })
+      .setTween(officeTl)
+      // .addIndicators({
+      //   name: 'about-us'
+      // })
+      .addTo(controller)
+    ;
+  };
+
+  var masterTimeline = new TimelineMax({ paused:true }),
+      headerTl = new TimelineMax();
+
+  headerTl
+    .to('#body .loader', 0.4, {autoAlpha: 0}, 0.4)
+    .fromTo($('#body .header'), 1, {autoAlpha: 0, top: -100}, {autoAlpha: 1, top: 0, ease:Power3.easeOut})
+    .from($('.main-slider .slick-list'), 1, {autoAlpha: 0, ease:Power1.easeOut})
+    // .call(function() {
+    //   $('.slick-slide.slick-current').addClass('is-active')
+    // }, null, null, 2)
+  ;
+
+  masterTimeline.add([headerTl]);
+
+  if( width > 991) {
+    initScrollMagic();
+    $(window).on('load', function(){
+      masterTimeline.play();
+    });
+  } else if ( width < 991 ) {
+    $("#body .loader").delay(400).fadeOut("slow");
+    $('.header').removeAttr('style');
+    $('.main-slider .slick-list').removeAttr('style');
+  }
+
+  $(window).resize(function(){
+    width = $(window).width()
+    if( width < 992 ) {
+        //you can just use 'controller' here as it will return true or false, you dont need all the conditionals
+        if (controller) {
+            controller = controller.destroy(true)
+        }
+    } else if ( width > 991 ) {
+        //same here
+        if ( !controller ) {
+            initScrollMagic()
+        }
+    }
+  });
+
+  drawSvg();
 
   // Chrome Smooth Scroll
   try {
@@ -144,8 +265,7 @@ $(document).on('ready', function(){
 });
 
 $(window).on('load', function() {
-  // $(".loader_inner").fadeOut();
-  $(".loader").delay(400).fadeOut("slow");
+  $(".body .loader").delay(400).fadeOut("slow");
 });
 
 $(window).on('resize', function() {
@@ -288,26 +408,6 @@ $(document).ready(function() {
 	$('.custom-input textarea').phAnim();
 });
 
-function scrollAnimation(){
-  var controller = new ScrollMagic.Controller(),
-      header = $('#body .header'),
-      headerTl = new TimelineMax(),
-      typeTl = new TimelineMax()
-  ;
-
-  // 1 scene
-  headerTl
-    .to(header, 1.5, {autoAlpha: 1, top: 0, ease:Power1.easeOut})
-  ;
-
-  var headerScene = new ScrollMagic.Scene({
-      triggerElement: header
-    })
-    .setTween(headerTl)
-    .addIndicators({name: "pin scene", colorEnd: "#FFFFFF"})
-    .addTo(controller);
-
-  // console.log('test');
+function drawSvg(){
+  
 }
-
-$(document).ready(scrollAnimation);

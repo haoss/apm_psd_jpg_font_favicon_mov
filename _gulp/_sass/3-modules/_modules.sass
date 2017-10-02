@@ -29,7 +29,7 @@
   margin-top: -2px
   width: 40px
   height: 4px
-  background-color: #000
+  background-color: $color-black
   border-radius: 4px
   position: absolute
   transition-property: transform
@@ -38,7 +38,7 @@
   &::before, &::after
     width: 40px
     height: 4px
-    background-color: #000
+    background-color: $color-black
     border-radius: 4px
     position: absolute
     transition-property: transform
@@ -1128,6 +1128,7 @@
 // Why
 .why
   padding: 115px 0
+  // position: relative
   &__block
     text-align: center
     font-size: rem(18)
@@ -1159,7 +1160,10 @@
 
 .office
   padding-bottom: 0
+
   &__text
+    position: relative
+    z-index: 100
     .h1, h1
       text-align: right
       margin-bottom: 15px
@@ -1243,7 +1247,8 @@
 .main-slider
   position: relative
   z-index: 200
-  margin-top: 155px
+  .slick-slide
+    padding-top: 155px
   &__block
     height: 490px
     // background: pink
@@ -1256,12 +1261,25 @@
       &.img-1
         left: 223px
         top: 124px
-      &.img-3
-        top: 124px
-        left: 65px
+        opacity: 0
+        transform: translateX(-100px)
+        transition: opacity 0.7s, transform 0.7s
+        transition-delay: 0.5s
       &.img-2
         top: 110px
         left: 90px
+        opacity: 0
+        transform: translateY(20px)
+        transition: opacity 0.7s, transform 0.7s
+        transition-delay: 0.5s
+      &.img-3
+        top: 124px
+        left: 65px
+        opacity: 0
+        transform: translateX(100px)
+        transition: opacity 0.7s, transform 0.7s
+        transition-delay: 0.5s
+
 
 .car-rent
   position: absolute
@@ -1291,6 +1309,7 @@
     top: 53px
     left: 33px
     text-decoration: none
+    opacity: 0
     &>.span-1
       height: 156px
       transform: skewX(13deg)
@@ -1305,6 +1324,7 @@
       transition: background 0.35s
       position: relative
       z-index: 10
+
       &>span
         transform: skewX(-13deg)
         display: inline-block
@@ -1357,9 +1377,17 @@
       &>.span-3
         background: linear-gradient(to left, #00c8ff, #00c8ff)
   &--first
+    transform: translateX(100px)
+    transition: opacity 0.7s, transform 0.7s
+    transition-delay: 0.5s
+    opacity: 0
     &>.span-2
       background: linear-gradient(to left, #0097ff, #00c8ff)
   &--third
+    transform: translateX(-100px)
+    transition: opacity 0.7s, transform 0.7s
+    transition-delay: 0.5s
+    opacity: 0
     &>.span-1, &>.span-2
       background: linear-gradient(to right, #0097ff, #00c8ff)
     left: inherit
@@ -1374,9 +1402,12 @@
       &>span
         transform: skewX(-18deg)
   &--second
+    transition: opacity 0.7s, transform 0.7s
+    transition-delay: 0.5s
+    opacity: 0
     top: 23px
     left: 50%
-    transform: translateX(-249px)
+    transform: translateX(-249px) translateY(-50px)
     &>.span-1
       width: 366px
       &>span
@@ -1413,6 +1444,28 @@
   &:focus
     outline: none
 
+.slick-slide.slick-active
+  .main-slider__block
+    .car-rent--first
+      opacity: 1
+      transform: translateX(0)
+    .car-rent--second
+      opacity: 1
+      transform: translateX(-249px) translateY(0px)
+    .car-rent--third
+      opacity: 1
+      transform: translateX(0)
+  .main-slider__block
+    img.img-1
+      opacity: 1
+      transform: translateX(0)
+    img.img-2
+      opacity: 1
+      transform: translateY(0)
+    img.img-3
+      opacity: 1
+      transform: translateX(0)
+
 .popup
   position: relative
   background: $color-white
@@ -1448,7 +1501,75 @@
 .mfp-bg
   background: rgba($color-white,.8)
 
-#body
-  .header
-    top: -100%
-    opacity: 0
+// svg
+#svg .path
+  stroke-dasharray: 6
+  stroke-dashoffset: 600
+  animation: dash 60s linear infinite
+#svg .path1
+  stroke-dasharray: 4
+  stroke-dashoffset: 600
+  animation: dash 40s linear infinite
+#svg .path2
+  stroke-dasharray: 2
+  stroke-dashoffset: 600
+  animation: dash 120s linear infinite
+#svg .path3
+  stroke-dasharray: 2
+  stroke-dashoffset: 600
+  animation: dash 150s linear alternate infinite
+
+@keyframes dash
+  from
+    stroke-dashoffset: 600
+  to
+    stroke-dashoffset: 0
+
+#svg .path7
+  stroke-dasharray: 95 3
+  stroke-dashoffset: 900
+  animation: dash 50s linear alternate infinite
+
+@keyframes dash
+  from
+    stroke-dashoffset: 600
+  to
+    stroke-dashoffset: 0
+
+#svg .path4
+  stroke-dasharray: 2
+  stroke-dashoffset: 100
+  animation: dash 15s linear infinite
+#svg .path6
+  stroke-dasharray: 1
+  stroke-dashoffset: 600
+  animation: dash 120s linear infinite
+
+#cloud1
+  position: absolute
+  z-index: 10
+  animation: moveClouds1 30s linear infinite
+#cloud3
+  position: absolute
+  z-index: 10
+  animation: moveClouds2 28s linear infinite
+#cloud2
+  position: absolute
+  z-index: 10
+  animation: moveClouds3 25s linear infinite
+
+@keyframes moveClouds1
+  0%
+    transform: translateX(120px)
+  100%
+    transform: translateX(-550px)
+@keyframes moveClouds2
+  0%
+    transform: translateX(-100px)
+  100%
+    transform: translateX(550px)
+@keyframes moveClouds3
+  0%
+    transform: translateX(100px)
+  100%
+    transform: translateX(-550px)

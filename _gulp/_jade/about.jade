@@ -7,7 +7,7 @@ html(lang="ru")
 
   include ./_include/_head
 
-  body
+  body.body
     // Preloader
     include ./_include/_preloader
     
@@ -72,11 +72,11 @@ html(lang="ru")
           .section.type
             .type__body
               img.type__logo(src="./img/type-logo.png", alt="")
-              a(href="#!").type__link.type__link--first
+              a(href="#register").type__link.type__link--first.open-popup-link
                 strong SUPPLIERS
                 small Press here for more details
                 img.type__img.type__img--first(src="./img/type-img-1.png", alt="")
-              a(href="#!").type__link.type__link--second
+              a(href="#register").type__link.type__link--second.open-popup-link
                 strong CLIENTS
                 small Press here for more details
                 img.type__img.type__img--second(src="./img/type-img-2.png", alt="")

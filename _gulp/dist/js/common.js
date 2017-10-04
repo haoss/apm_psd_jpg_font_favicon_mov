@@ -3,7 +3,7 @@
 // Document ready
 $(document).on('ready', function(){
   var controller = null;
-  var width = $(window).width()
+  var width = $(window).width();
 
   // E-mail Ajax Send
   // Documentation & Example: https://github.com/agragregra/uniMail
@@ -20,6 +20,7 @@ $(document).on('ready', function(){
         th.trigger("reset");
       }, 1000);
     });
+
     return false;
   });
 
@@ -28,7 +29,7 @@ $(document).on('ready', function(){
     $(this).magnificPopup({
       delegate: '.gallery-item',
       type: 'image',
-      gallery:{
+      gallery: {
         enabled:true
       },
       zoom: {
@@ -55,7 +56,7 @@ $(document).on('ready', function(){
     closeOnContentClick: true,
     mainClass: 'mfp-img-mobile',
     image: {
-    	verticalFit: true
+      verticalFit: true
     }
   });
 
@@ -128,7 +129,10 @@ $(document).on('ready', function(){
     fade: true,
     speed: 2000,
     fade: true,
-    cssEase: 'ease'
+    cssEase: 'ease',
+    accessibility: false,
+    focusOnSelect: false,
+    waitForAnimate: false
     // autoplay: true,
     // autoplaySpeed: 2000
   });
@@ -151,6 +155,7 @@ $(document).on('ready', function(){
       e.preventDefault();
       var dataItem = _this.data('item');
       $('.slick-dots li button').eq(dataItem).trigger('click');
+      jQuery('html,body').animate({scrollTop: 0}, 0);
     })
   });
 
@@ -441,7 +446,3 @@ $(document).ready(function() {
 	$('.custom-input input').phAnim();
 	$('.custom-input textarea').phAnim();
 });
-
-function drawSvg(){
-
-}

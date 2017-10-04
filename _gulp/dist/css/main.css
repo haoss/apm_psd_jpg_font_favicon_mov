@@ -3858,21 +3858,33 @@ a.link:hover, a.link:focus, a.link:active {
     .section__head--big .h1, .section__head--big h1 {
       line-height: 1.2;
       font-size: 4.375rem; }
+      .section__head--big .h1 > *, .section__head--big h1 > * {
+        vertical-align: middle; }
       .section__head--big .h1 b, .section__head--big h1 b {
         background: #00c8ff;
         -webkit-transform: skewX(-10deg);
                 transform: skewX(-10deg);
         color: #ffffff;
         font-family: "Intro";
-        padding: 0 25px;
-        display: inline-block;
+        padding: 0 20px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         margin-left: 15px;
         border-radius: 10px;
-        vertical-align: middle; }
+        line-height: 1;
+        vertical-align: middle;
+        font-family: "RobotoBold";
+        text-transform: uppercase;
+        display: inline-block; }
         .section__head--big .h1 b span, .section__head--big h1 b span {
           -webkit-transform: skewX(10deg);
                   transform: skewX(10deg);
           display: inline-block;
+          line-height: 1;
           height: 90px;
           line-height: 90px; }
 
@@ -7206,7 +7218,7 @@ ol.list--mark {
         margin-left: 10px; }
     .car-rent--first > .span-1 > span strong, .car-rent--second > .span-1 > span strong, .car-rent--third > .span-1 > span strong {
       font-size: 3.1875rem;
-      margin-top: -7px;
+      margin-top: -5px;
       margin-left: -3px; }
   .car-rent--first > .span-2, .car-rent--second > .span-2, .car-rent--third > .span-2 {
     height: 14px;
@@ -7248,7 +7260,10 @@ ol.list--mark {
       margin-left: 95px; }
   .slick-slide.slick-active .main-slider__block .car-rent--second {
     -webkit-transform: translateX(-116px) translateY(0px);
-            transform: translateX(-116px) translateY(0px); } }
+            transform: translateX(-116px) translateY(0px); }
+  .section__head--big .h1 b, .section__head--big h1 b {
+    padding-left: 10px;
+    padding-right: 10px; } }
 
 @media (max-height: 320px) and (orientation: landscape) {
   .header__nav-wrapper ul {

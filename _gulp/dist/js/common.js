@@ -272,7 +272,7 @@ $(document).on('ready', function(){
     $('.main-slider .slick-list').removeAttr('style');
   }
 
-  $(window).resize(function(){
+  $(window).on('resize', function(){
     width = $(window).width()
     if( width < 992 ) {
         //you can just use 'controller' here as it will return true or false, you dont need all the conditionals
@@ -286,8 +286,6 @@ $(document).on('ready', function(){
         }
     }
   });
-
-  drawSvg();
 
   // Chrome Smooth Scroll
   try {

@@ -233,19 +233,29 @@ a.link
       .h1, h1
         line-height: 1.2
         font-size: rem(70)
+        &>*
+          vertical-align: middle
         b
           background: $color-blue
           transform: skewX(-10deg)
           color: $color-white
           font-family: $font-intro
-          padding: 0 25px
-          display: inline-block
+          padding: 0 20px
+          justify-content: center
+          align-items: center
           margin-left: 15px
           border-radius: 10px
+          line-height: 1
           vertical-align: middle
+          font-family: $font-roboto-bold
+          // font-weight: bold
+          text-transform: uppercase
+          display: inline-block
           span
             transform: skewX(10deg)
             display: inline-block
+            line-height: 1
+            // padding: 10px 0
             height: 90px
             line-height: 90px
 

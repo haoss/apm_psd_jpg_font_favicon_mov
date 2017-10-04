@@ -262,30 +262,15 @@ $(document).on('ready', function(){
   masterTimeline.add([headerTl]);
 
   if( width > 991) {
-    initScrollMagic();
     $(window).on('load', function(){
       masterTimeline.play();
     });
+    initScrollMagic()
   } else if ( width < 991 ) {
     $("#body .loader").delay(400).fadeOut("slow");
     $('.header').removeAttr('style');
     $('.main-slider .slick-list').removeAttr('style');
   }
-
-  $(window).on('resize', function(){
-    width = $(window).width()
-    if( width < 992 ) {
-        //you can just use 'controller' here as it will return true or false, you dont need all the conditionals
-        if (controller) {
-            controller = controller.destroy(true)
-        }
-    } else if ( width > 991 ) {
-        //same here
-        if ( !controller ) {
-            initScrollMagic()
-        }
-    }
-  });
 
   // Chrome Smooth Scroll
   try {

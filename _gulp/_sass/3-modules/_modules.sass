@@ -1447,23 +1447,24 @@
   .cloud
     &-1, &-2, &-3
       position: absolute
-      z-index: 100
+      z-index: 200
+      transform: translateZ(0)
     &-1
       width: 72px
       height: 41px
       top: 139px
-      animation: moveClouds1 21s linear infinite
+      animation: moveClouds1 31s linear infinite
     &-2
       width: 57px
       height: 24px
       top: 220px
-      animation: moveClouds2 25s linear infinite
+      animation: moveClouds2 40s linear infinite
       left: 75%
     &-3
       width: 83px
       height: 48px
       top: 60px
-      animation: moveClouds3 11s linear infinite
+      animation: moveClouds3 22s linear infinite
       left: 65%
 
 @keyframes moveClouds1

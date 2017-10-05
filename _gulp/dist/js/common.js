@@ -129,7 +129,7 @@ $(document).on('ready', function(){
     fade: true,
     speed: 2000,
     fade: true,
-    cssEase: 'ease',
+    // cssEase: 'ease',
     accessibility: false,
     focusOnSelect: false,
     waitForAnimate: false
@@ -138,11 +138,11 @@ $(document).on('ready', function(){
   });
 
   // On before slide change
-  $('.main-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-    var active = currentSlide;
-    $('.header__links li').removeClass('active');
-    $('.header__links li').eq(nextSlide).addClass('active')
-  });
+  // $('.main-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  //   var active = currentSlide;
+  //   $('.header__links li').removeClass('active');
+  //   $('.header__links li').eq(nextSlide).addClass('active')
+  // });
 
   $(document).on('click', '.popup__close', function(){
     $.magnificPopup.close();
@@ -273,14 +273,14 @@ $(document).on('ready', function(){
   }
 
   // Chrome Smooth Scroll
-  try {
-    $.browserSelector();
-    if($("html").hasClass("chrome")) {
-        $.smoothScroll();
-    }
-  } catch(err) {
-
-  };
+  // try {
+  //   $.browserSelector();
+  //   if($("html").hasClass("chrome")) {
+  //       $.smoothScroll();
+  //   }
+  // } catch(err) {
+  //
+  // };
 
   // simpleForm version 2015-09-23 14:30 GMT +2
   simpleForm('form.form-callback');

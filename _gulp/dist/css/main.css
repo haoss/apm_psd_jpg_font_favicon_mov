@@ -6168,26 +6168,28 @@ ol.list--mark {
   position: relative; }
   .cloud-animate .cloud-1, .cloud-animate .cloud-2, .cloud-animate .cloud-3 {
     position: absolute;
-    z-index: 100; }
+    z-index: 200;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0); }
   .cloud-animate .cloud-1 {
     width: 72px;
     height: 41px;
     top: 139px;
-    -webkit-animation: moveClouds1 21s linear infinite;
-            animation: moveClouds1 21s linear infinite; }
+    -webkit-animation: moveClouds1 31s linear infinite;
+            animation: moveClouds1 31s linear infinite; }
   .cloud-animate .cloud-2 {
     width: 57px;
     height: 24px;
     top: 220px;
-    -webkit-animation: moveClouds2 25s linear infinite;
-            animation: moveClouds2 25s linear infinite;
+    -webkit-animation: moveClouds2 40s linear infinite;
+            animation: moveClouds2 40s linear infinite;
     left: 75%; }
   .cloud-animate .cloud-3 {
     width: 83px;
     height: 48px;
     top: 60px;
-    -webkit-animation: moveClouds3 11s linear infinite;
-            animation: moveClouds3 11s linear infinite;
+    -webkit-animation: moveClouds3 22s linear infinite;
+            animation: moveClouds3 22s linear infinite;
     left: 65%; }
 
 @-webkit-keyframes moveClouds1 {

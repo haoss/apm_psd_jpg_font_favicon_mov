@@ -138,11 +138,11 @@ $(document).on('ready', function(){
   });
 
   // On before slide change
-  // $('.main-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  //   var active = currentSlide;
-  //   $('.header__links li').removeClass('active');
-  //   $('.header__links li').eq(nextSlide).addClass('active')
-  // });
+  $('.main-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    var active = currentSlide;
+    $('.header__links li').removeClass('active');
+    $('.header__links li').eq(nextSlide).addClass('active')
+  });
 
   $(document).on('click', '.popup__close', function(){
     $.magnificPopup.close();
@@ -160,17 +160,21 @@ $(document).on('ready', function(){
   });
 
   function initScrollMagic(){
-    var controller = new ScrollMagic.Controller();
+    var controller = new ScrollMagic.Controller(),
+        bodyType = $('#body .type'),
+        bodyWhy = $('#body .why'),
+        bodyUs = $('#body .about-us')
+    ;
 
     var typeTl = new TimelineMax();
     typeTl
-      .from($('#body .type'), 0.7, {autoAlpha: 0, y: 50, ease:Power3.easeOut})
-      .from($('#body .type .type__img--first'), 1, {autoAlpha: 0, x: 50, ease:Power1.easeOut}, 'auto')
-      .from($('#body .type .type__img--second'), 1, {autoAlpha: 0, x: '-50', ease:Power1.easeOut}, 'auto')
-      .from($('#body .type .type__link--first strong'), 1, {autoAlpha: 0, x: '-150', ease:Power1.easeOut}, 'auto2')
-      .from($('#body .type .type__link--first small'), 1, {autoAlpha: 0, x: '-150', ease:Power1.easeOut}, 'auto2')
-      .from($('#body .type .type__link--second strong'), 1, {autoAlpha: 0, x: 150, ease:Power1.easeOut}, 'auto2')
-      .from($('#body .type .type__link--second small'), 1, {autoAlpha: 0, x: 150, ease:Power1.easeOut}, 'auto2')
+      .from(bodyType, 0.7, {autoAlpha: 0, y: 50, ease:Power3.easeOut})
+      .from(bodyType.find('.type__img--first'), 1, {autoAlpha: 0, x: 50, ease:Power1.easeOut}, 'auto')
+      .from(bodyType.find('.type__img--second'), 1, {autoAlpha: 0, x: '-50', ease:Power1.easeOut}, 'auto')
+      .from(bodyType.find('.type__link--first strong'), 1, {autoAlpha: 0, x: '-150', ease:Power1.easeOut}, 'auto2')
+      .from(bodyType.find('.type__link--first small'), 1, {autoAlpha: 0, x: '-150', ease:Power1.easeOut}, 'auto2')
+      .from(bodyType.find('.type__link--second strong'), 1, {autoAlpha: 0, x: 150, ease:Power1.easeOut}, 'auto2')
+      .from(bodyType.find('.type__link--second small'), 1, {autoAlpha: 0, x: 150, ease:Power1.easeOut}, 'auto2')
     ;
     var typeScene = new ScrollMagic.Scene({
       triggerElement: '#body .type',
@@ -189,7 +193,7 @@ $(document).on('ready', function(){
 
     var whyTl = new TimelineMax();
     whyTl
-      .from($('#body .why'), 1.5, {autoAlpha: 0, y: 150, ease:Power1.easeOut})
+      .from(bodyWhy, 1.5, {autoAlpha: 0, y: 150, ease:Power1.easeOut})
     ;
     var whyScene = new ScrollMagic.Scene({
       triggerElement: '#body .why',
@@ -208,8 +212,8 @@ $(document).on('ready', function(){
 
     var aboutUsTl = new TimelineMax();
     aboutUsTl
-      .from($('#body .about-us .about-us__img'), 1.5, {autoAlpha: 0, x: '-200', ease:Power1.easeOut}, 'start')
-      .from($('#body .about-us .about-us__text'), 1.5, {autoAlpha: 0, x: 200, ease:Power1.easeOut}, 'start')
+      .from(bodyUs.find('.about-us__img'), 1.5, {autoAlpha: 0, x: '-200', ease:Power1.easeOut}, 'start')
+      .from(bodyUs.find('.about-us__text'), 1.5, {autoAlpha: 0, x: 200, ease:Power1.easeOut}, 'start')
     ;
     var whyScene = new ScrollMagic.Scene({
       triggerElement: '#body .about-us',

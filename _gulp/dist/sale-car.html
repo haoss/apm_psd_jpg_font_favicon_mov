@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Sale car - APM Group</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="./favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="./favicon/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="./favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="./favicon/manifest.json">
+        <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="./favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="./favicon/mstile-144x144.png">
+        <meta name="msapplication-config" content="./favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="./js/libs/selectric/selectric.css">
+        <link rel="stylesheet" href="./js/libs/slick/slick.css">
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body class="body">
+        <!-- Preloader-->
+        <div class="loader">
+            <div class="loader__block"></div>
+        </div>
+        <div id="register" class="popup popup--register mfp-hide">
+            <div class="popup__wrapper"><i class="ion-ios-close-empty popup__close"></i>
+                <div class="popup__title">REGISTER NOW</div>
+                <div class="form">
+                    <form action="#">
+                        <fieldset>
+                            <div class="form-group custom-input">
+                                <label for="input-name">Name</label>
+                                <input id="input-name" type="text" name="name" placeholder="Name" class="form-control"><i class="ion-alert-circled"></i>
+                            </div>
+                            <div class="form-group custom-input has-error">
+                                <label for="input-email">Email</label>
+                                <input id="input-email" type="email" name="email" placeholder="Email" class="form-control"><i class="ion-alert-circled"></i>
+                            </div>
+                            <div class="form-group custom-input">
+                                <label for="input-phone">Phone</label>
+                                <input id="input-phone" type="phone" name="phone" placeholder="Phone" class="form-control"><i class="ion-alert-circled"></i>
+                            </div>
+                            <div class="form-group custom-input">
+                                <label for="input-message">Message</label>
+                                <textarea id="input-message" name="message" placeholder="Message" class="form-control"></textarea><i class="ion-alert-circled"></i>
+                            </div>
+                            <div class="text-center">
+                                <button type="button" class="btn btn--blue"><span>Send</span></button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="base">
+            <!-- Header-->
+            <header class="header">
+                <div class="container">
+                    <div class="header__logo"><a href="index.html"><img src="./img/logo.png" alt=""></a></div>
+                    <div class="header__links">
+                        <ul>
+                            <li class="active"><a href="#" data-item="0">Rent</a></li>
+                            <li><a href="#" data-item="1">Parts</a></li>
+                            <li><a href="#" data-item="2">Sale</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__language">
+                        <ul>
+                            <li class="active"><span>En</span></li>
+                            <li><a href="#!">Ru</a></li>
+                        </ul>
+                    </div>
+                    <nav role="navigation" class="header__nav">
+                        <button id="header__button" class="header__button">
+                            <div class="hamburger hamburger--arrowturn js-hamburger">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"> </div>
+                                </div>
+                            </div><span>menu</span>
+                        </button>
+                        <div class="header__nav-wrapper">
+                            <ul>
+                                <li><a href="index.html" title="Home">Home</a></li>
+                                <li><a href="about.html" title="About us">About us</a></li>
+                                <li><a href="parts.html" title="Parts">Parts</a></li>
+                                <li><a href="news.html" title="News">News</a></li>
+                                <li><a href="contacts.html" title="Contacts">Contacts</a></li>
+                            </ul>
+                            <div class="header__social"><a href="#!"><img src="./img/icon/icon-facebook.svg" alt=""></a><a href="#!"><img src="./img/icon/icon-youtube.svg" alt=""></a><a href="#!"><img src="./img/icon/icon-instagram.svg" alt=""></a></div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <!-- Content-->
+            <div class="content">
+                <div class="container">
+                    <div class="section__head">
+                        <h1>2017 Lexus LS Sedan</h1>
+                    </div>
+                    <div class="car-product">
+                        <div class="row">
+                            <div class="car-product__left col-md-8">
+                                <!-- Tab panes-->
+                                <div class="car-product__carousel-top">
+                                    <div id="gallery1" role="tabpanel" class="tab-pane active"><img src="./img/cars-list/car-carousel-top-1.png" alt="" class="img-responsive"></div>
+                                    <div id="gallery2" role="tabpanel" class="tab-pane"><img src="./img/cars-list/car-carousel-top-2.png" alt="" class="img-responsive"></div>
+                                    <div id="gallery3" role="tabpanel" class="tab-pane"><img src="./img/cars-list/car-carousel-top-3.png" alt="" class="img-responsive"></div>
+                                </div>
+                                <!-- Nav tabs-->
+                                <ul role="tablist" class="car-product__carousel-bottom">
+                                    <li role="presentation" class="active"><a href="#gallery1" aria-controls="gallery1" role="tab" data-toggle="tab"><img src="./img/cars-list/car-carousel-bottom-1.png" alt=""></a></li>
+                                    <li role="presentation"><a href="#gallery2" aria-controls="gallery2" role="tab" data-toggle="tab"><img src="./img/cars-list/car-carousel-bottom-2.png" alt=""></a></li>
+                                    <li role="presentation"><a href="#gallery3" aria-controls="gallery3" role="tab" data-toggle="tab"><img src="./img/cars-list/car-carousel-bottom-3.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                            <div class="car-product__right col-md-4">
+                                <div class="car-product__title">The Basics</div>
+                                <div class="car-product__th">
+                                    <table>
+                                        <tr>
+                                            <td><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAUCAYAAABWMrcvAAABgklEQVQ4jX3SPWgVURAF4O/KQiCKCU+tIhqtLKwEWZSoKcTG0sZGAhZW/hQWIqj4A5ZCsBNJk84iphYLjSIuiIiVkMJEo7xgsJBYKIRrsfNg35LnNDNz5pzdO4dJOWfNSJUzuI+t+I3ruTTX5BQtwXHcwTmMYAlPU2UtlxZ6vC364yKuYRZHcmkRVwM3SNRBF09y6W5gi4EPFL3H0Vy62cBOB775TniAl6kyjFc4hvM40SSlTdzr4A3WsDP+/PN/zxOELm6g2xZAkSoTuIShBn6wl1NlvoH/wcNCbe8F/GgMH0dewu0GvguzBRK+4xmWMYH1IK3jI15jL04h9XY6jGlsw1hrhbHAp4PXZ8RfbKgvYDxm49FvxLw2ovXVK9iP3bHXO3zAHA71SG3LRzCKBZyNPBq4QaJ76ju7jOHIncAHimAGK1GvRN8XPdEqprAj6q+4FXk18KmoJW/zN+zDJL7k0qdU2Y6TeJ5Lv1LlAPbgBT4XapeW1SciVf1PafVDePQPcjForAspGCsAAAAASUVORK5CYII=" alt=""></td>
+                                            <td>8 speed Automatic | CVT Automatic</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAUCAYAAABSx2cSAAABiElEQVQ4jZ3UPWsVQRgF4Gc2iwZEUkQQTKJoIYJEbxFYIoSUASvxo1HiH7AKCP4AK7GwEFsFYypJEKxS2t3pbPxA0JDCL5AbsDEIyVjsKJuNN3I9sJzhzDmzM8z7TtBNz9FBwmyqrOmDEB3HCwS8LNBJlQk8w0zDOBKiyyEaaeRn8CT7OyW28sQ27oVoAV9xDJ9xO0TrOIyjuJ/9W2VrZx/xGp9Q4gQ+4BV6WfuDEsMh2o+DuJMqS3nbF7GMm6mykrVrmA7RPgwXWMSb/JfVxsK9zBsNbRWn8RaLUkp//XTTGd2UdNPZfp6ifR0NbLR4F/YKT2Qe/5/wyRYPFP4n9gq/b/FA4S8tHig82uJdKEN0F5ewjiup8q1fOESH8FRd98sF5jGFNcw1Fj6HH5l/Y05d+1OYL7GZKr0QfcetEJ1XN8ZVXMCjXMtHMImV7N9sd9WYukVHcQA/M0+qW3Jsx5kxlMcFFlLlcT7fAzzEUqrcyNp1nMr+odDvGQpRoa6ud6mynbUdz9AvhjiRtk+I5HwAAAAASUVORK5CYII=" alt=""></td>
+                                            <td>Rear Wheel Drive | Four Wheel Drive</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAB6klEQVQ4jaXUTYhNYRzH8c+9c5VGLKixIDUL700NqTuJRo33EknyMhhNZCJZshXDYhZkh80wxhILIalZUHdKKTXYIFFMFhpvjTKOxfO/dd1myuVfp+ec8zx9z+93fv/nySllTTiENtQjjy/ox7m4n7Cy4p/PeQzgIzpwFMfQial4gr2YVsWZjFnjfSCnlB1AD17iMcawGo/wCXtibi3m4CC2hvISOrOisUqFl9GMpbG4CwvxLWDNuIFXuIrnMb84ftGRSoUFZHhdpfwnTmAZ2nEW1/Gmat0A5lW+yGM7nga8sj6HzQ4swC+cx2G0og7vsSE3aHalwjMYxm70VkFH8EIKoTts7gsBb6XA6vEgN6gtK3pXwKSwPcX49QPT0RTWN+OD1AVXAiqgK3JKWSMW4U7Yqq71YbUdfQFtxSZ8xUMpvJMYyUuB3J4ABndjcV9Aj+M+ZmAnNqIR6zBUHcREdS3GMrQP86XAtkm7qoB7fwscD3oa+6WwbkmB9eZrAJahZfsXyrCsqBtDWJJTympkgjVS+zRI58AQtmDmvwLLVSf17q64emq1XF1jUss8k7bl6P8qzOEU5konVUMtKZMOgq4A1WGVdPpcxCW01ApcLrVHP0ZjXBmwHVnRcK3A72gJpYWA3kRLVjQMvwFxH4EXLjNA/QAAAABJRU5ErkJggg==" alt=""></td>
+                                            <td>8.6 - 11.1 L/100km</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAABgElEQVQ4jZXUP0hVURwH8M+9z0hEsSVwrCAQHRQUrltTU3+GUHBLjJxanBwa1FGXclHQyWgucCncgob3NklQJ3kUQbaFIUr5bsM5j5dy3+v1g8M9h9/9fvn9vr/vOYlyrkncxAfUCnLHyHCSZxcTHc3YMIAv2MAJtjCBEubRh8PLoLQF4Tu8xg2sox/P43muiOxfFdawFvdT8XuAhRaYlhU+wz6quI5T3I3nKj5itKjCLg09EqG1CdzDHXz/6/8+QUMYwpuk4n6e+ZRU3MK3RDnfRbegyyAeYAez+NGqPTyKawtL+JmiB4vCVIfwBNNtkIlddUfsInrqGp5jUvDWeRtE9ahFzGQdlyjnVUG3DL9R/g/SEsaEWVRwULfNQ8FrVzAi2KOduI1t/MIMDR924SWG0dkmGVzDe+xGDmlcT3GEr8K1mtOwR7PoxYow4aPIkXYIXhsQrlqnYJtxvMJjQdcism28zTObSUWKz9hLmrw2JawK2p4V5K9iGS8uvzZ/ADflWGx6UhHzAAAAAElFTkSuQmCC" alt=""></td>
+                                            <td>Petrol</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAUCAYAAABSx2cSAAABxklEQVQ4jY3Tz0tUURwF8M8dpzLLNGiXkGWbiKiQertcGNVGCkOhtq5aR5vatGkVrf0PCjLLIAikNm2aR23CRRQ1Q6AQkZhlZYHeFu9OjOP048CXxzucc+95h+8LMUaNCLnzuIEfDfQmXIyZm2vEMcY1oxJnVGJPE7dbJc40a0vWozNmZpu4BXQ2C8stzPMhN9XEbcB8s7DVzScS/wBX03Ml8WsQGgsLuWGcw/F0wAK2YxWPcCtm7q4zh9wlnMY1fEYXuvEJi9iGK7gfM9d/m0NuM97iDG6jmmYJW7EnzSim0Bcz3+vmsxjBHN7EzPi678tdwF7sxETMTNYLG8EdDGOyRYkSP5x0I1AKuTYM4COqMfOhlTPx1aQbCLm2EnpRw1FM/+HWOqaTrobeEjpSMe2KZv+GBcWeL6GjhFn0Kdo+9A/z4RS9D7MljKXoOzAUct2tXIkfSrpejAWV+B7H8DilaFcsxBYsp/evisVZRg8G8aSM1Zh5HXKXcRAP8TxmFhtu7cIRnMKLpF8JKrGGfnzDDN6l+dKQuhO70hxAwKsynmIwZiZCbj/2KbaoHr8edw4vY+ZnyJ3Es6AS+3FP8ef8LzZi9BeAabatIGLlSwAAAABJRU5ErkJggg==" alt=""></td>
+                                            <td>5 Passengers</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAABZ0lEQVQ4jZ3Uv0uVURgH8M/RizesoKVwCMFamgXRoSVwlVzEQRPkFgRFQZDhH6BB0JYpii5Sk6OLg4kgeF8c3I1+EA6t0dBQ9Da859WXS5d73/tM53DO++F7eM57gnqqSd3GCwzid7NNsQJOMVNpsuE5pjEf59dagL8iuvk/8CnG8QTrSPCxBXgHb9DfCE7iPh7iXUw5jR1M4FmjlA4TEnARf7oKa6NYRA2bmMUtXMZ7bLdICXJwEGu4hw3MYQ+HsubU8KEdsIKr2IofvcZynJM1YwoH7WA5OI+3eIxdLBXW99qFiuA4HsQkNVwpA8SGXCiCVfyN0HHZRLHSGEoF3djHQEfS8Pk4JBl4iuv4VtIKeBmSs+Ou5Ak/40YHYCq7Sr1x/j0Hv8iOW0dfSfSkMP6Zg59wE2N4VBIs1hwE9XRI9mOPyI5Rqhqa8rULR/iBBfR0Gi8kelAN8YG9hFe4q/Vj2qyqWP0Ho5pI7B0nQyEAAAAASUVORK5CYII=" alt=""></td>
+                                            <td>4 Doors</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="car-product__price">
+                                    <div><span>$ </span>213 999</div>
+                                </div><a href="#!" class="btn btn--blue car-product__btn"><span>Request a call</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <p>Get the benefit of lane departure warning. 10 airbags to protect you and your family. It has a 4.6 litre engine and 285kW of power!. This Stunning New Lexus LS460 2017 has voice recognition. This car has keyless start, driver airbag, woodgrain - dash board, front & rear power windows, bluetooth functionality, power tailgate/boot and hill holder. Collision avoidance system. Inbuilt GPS navigation system. Has blind spot sensors. Rear vision camera so you can easily see what is behind you when reversing. This car has parking assist graphical display. It has storage compartment in centre console. This car has active cornering headlamps, information display, brake assist, digital radio (DAB+), adaptive cruise control, HID headlamps, rear cup holders and premium sound system. </p>
+                    </div>
+                    <div class="clear30"></div>
+                    <div class="section__head section__head--line">
+                        <h2>you will like it</h2>
+                    </div>
+                    <div class="cars-list cars-list--carousel">
+                        <div class="cars-list__wrapper"><a href="#!" class="cars-list__block">
+                                <div class="cars-list__img"><img src="./img/cars-list/cars-list-carousel-1.png"></div><span class="cars-list__info">2017</span><span class="cars-list__title">Lexus CT Hatch</span><span class="cars-list__info">From <strong>$46,291 </strong>Drive away</span></a><a href="#!" class="cars-list__block">
+                                <div class="cars-list__img"><img src="./img/cars-list/cars-list-carousel-2.png"></div><span class="cars-list__info">2017</span><span class="cars-list__title">Lexus IS Sedan</span><span class="cars-list__info">From <strong>$66,535 </strong>Drive away</span></a><a href="#!" class="cars-list__block">
+                                <div class="cars-list__img"><img src="./img/cars-list/cars-list-carousel-3.png"></div><span class="cars-list__info">2017</span><span class="cars-list__title">Lexus LS Sedan</span><span class="cars-list__info">From <strong>$201,962 </strong>Drive away</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer-->
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__copyright">© 2017 by Auto Parts Market. </div>
+                </div>
+            </footer>
+        </div>
+        <!--[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+        
+        -->
+        <!-- Load Scripts-->
+        <script src="./js/libs.js"></script>
+        <!-- Footer js-->
+        <script src="./js/libs/selectric/jquery.selectric.min.js"></script>
+        <script src="./js/libs/slick/slick.min.js"></script>
+        <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+        
+        <script src="./js/common.js"></script>
+    </body>
+</html>

@@ -1,0 +1,328 @@
+/* additional css */
+
+.section
+  &__head
+    &--line
+      position: relative
+      &::after
+        width: 100%
+        position: absolute
+        left: 0
+        height: 3px
+        background: $color-blue
+        content: ''
+        top: 50%
+        transform: translateY(-50%)
+      h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+        position: relative
+        margin-bottom: 35px
+        z-index: 5
+
+.cars-list
+  margin-bottom: 35px
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    +clearfix
+  &__block
+    float: left
+    width: calc(100% / 6)
+    border: 2px solid transparent
+    text-decoration: none
+    text-align: center
+    color: $primary-color
+    font-family: $font-roboto-light
+    font-size: rem(13)
+    display: block
+    border-radius: 5px
+    height: 167px
+    margin-bottom: 15px
+    padding-top: 12px
+    overflow: hidden
+    &:hover
+      color: #808080
+      border-color: $color-blue
+      .cars-list__title
+        color: $color-blue
+  &__title
+    text-transform: uppercase
+    font-family: $font-intro
+    font-size: rem(16)
+    display: block
+    line-height: 1
+    margin-bottom: 9px
+  &__info
+    display: block
+    color: #808080
+  &__img
+    height: 80px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 14px
+    img
+      display: block
+
+  &--auto, &--carousel
+    .cars-list
+      &__block
+        height: 209px
+        width: calc(100% / 4)
+        padding-top: 10px
+      &__title
+        font-size: rem(18)
+      &__img
+        height: 112px
+        margin-bottom: 17px
+  &--carousel
+    .cars-list
+      &__block
+        width: calc(100% / 3)
+        border-radius: 10px
+        height: 278px
+        padding-top: 15px
+      &__img
+        height: 138px
+        margin-bottom: 24px
+      &__title
+        font-size: rem(20)
+        margin-top: 9px
+      &__info
+        strong
+          font-family: $font-roboto-bold
+          color: $primary-color
+
+.car-product
+  margin-bottom: 50px
+  +clearfix
+  &__title
+    font-family: $font-intro
+    color: $color-blue
+    font-size: rem(20)
+    margin-bottom: 25px
+    line-height: 1.1
+  &__price
+    font-size: rem(50)
+    color: $color-white
+    font-family: $font-intro
+    background: linear-gradient(to left, #ffe4bc, #ffa53b)
+    transform: skewX(-15deg)
+    margin-bottom: 20px
+    padding-left: 58px
+    padding-right: 58px
+    height: 80px
+    line-height: 80px
+    margin-left: -60px
+    border-radius: 10px
+    display: inline-block
+    white-space: nowrap
+    &>div
+      transform: skewX(15deg)
+    span
+      font-family: $font-roboto-bold
+  &__th
+    font-size: rem(16)
+    margin-bottom: 15px
+    td
+      vertical-align: middle
+      padding-bottom: 10px
+      &+td
+        padding-left: 20px
+      img
+        vertical-align: inherit
+
+.tab-pane
+  display: none
+  &.active
+    display: block
+
+.car-product
+  &__carousel
+    &-bottom
+      position: absolute
+      margin: 0
+      padding: 0
+      white-space: nowrap
+      margin-left: 16px
+      margin-top: -84px
+      +clearfix
+      li
+        margin: 0
+        list-style: none
+        display: inline-block
+        border: 0
+        float: left
+        border: 3px solid transparent
+        img
+          opacity: 0.5
+          transition: all 0.35s
+          width: 105px
+        a
+          display: inline-block
+          background: $color-black
+        &.active
+          border: 3px solid $color-blue
+          img
+            opacity: 1
+        &+li
+          margin-left: 14px
+
+@media only screen and (max-width: 1199px)
+  .cars-list
+    &__img
+      img
+        max-width: 124px
+    &--auto
+      .cars-list
+        &__img
+          margin-bottom: 5px
+          img
+            max-width: 206px
+        &__title
+          max-width: 95%
+          line-height: 1.2
+    &--carousel
+      .cars-list
+        &__img
+          img
+            max-width: 260px
+  .car-product
+    &__carousel
+      &-bottom
+        margin-top: -70px
+        li
+          img
+            width: 86px
+          &+li
+            margin-left: 10px
+
+@media only screen and (max-width: 991px)
+  .cars-list
+    &__block
+      float: left
+      width: calc(100% / 4)
+    &--auto
+      .cars-list
+        &__block
+          width: calc(100% / 2)
+        &__img
+          margin-bottom: 17px
+    &--carousel
+      .cars-list
+        &__block
+          width: calc(100% / 3)
+        &__img
+          img
+            max-width: 180px
+  .car-product
+    &__left
+      margin-bottom: 60px
+    &__right
+      padding-right: 390px
+    &__price
+      position: absolute
+      top: 0
+      right: 15px
+    &__btn
+      position: absolute
+      right: 50px
+      top: 100px
+    &__th
+      margin-bottom: 0
+
+
+@media only screen and (max-width: 767px)
+  .cars-list
+    &__block
+      float: left
+      width: calc(100% / 3)
+    &--auto
+      .cars-list
+        &__img
+          margin-bottom: 5px
+    &--carousel
+      .cars-list
+        &__wrapper
+          padding: 0 25px
+          position: relative
+        &__img
+          img
+            max-width: 360px
+      .slick-arrow
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        background: none
+        border: 0
+        padding: 0
+        font-size: rem(30)
+        color: $color-blue
+      .slick-prev
+        left: 0
+      .slick-next
+        right: 0
+  .car-product
+    &__left
+      margin-bottom: 30px
+    &__right
+      float: none
+      padding: 0
+      max-width: 350px
+      padding-left: 30px
+      margin: 0 auto
+    &__price
+      position: inherit
+      margin-left: 0px
+    &__btn
+      position: inherit
+      top: inherit
+      right: inherit
+    &__th
+      margin-bottom: 15px
+    &__title
+      font-size: rem(30)
+    &__carousel
+      &-top
+        margin-bottom: 13px
+      &-bottom
+        position: inherit
+        margin: 0
+
+
+@media only screen and (max-width: 479px)
+  .cars-list
+    &__block
+      float: left
+      width: calc(100% / 2)
+    &--auto
+      .cars-list
+        &__block
+          width: 100%
+        &__img
+          margin-bottom: 17px
+    &--carousel
+      .cars-list
+        &__img
+          img
+            max-width: 230px
+  .car-product
+    margin-bottom: 40px
+    &__price
+      width: 100%
+      max-width: 280px
+      padding-left: 25px
+      padding-right: 10px
+      margin-left: 15px
+    &__right
+      padding-left: 15px
+    &__carousel
+      &-bottom
+        display: flex
+        li
+          &+li
+            margin-left: 8px
+    &__th
+      td
+        &+td
+          padding-left: 10px

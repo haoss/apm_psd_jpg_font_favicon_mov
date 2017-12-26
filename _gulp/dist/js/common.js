@@ -276,17 +276,8 @@ $(document).on('ready', function(){
     $('.main-slider .slick-list').removeAttr('style');
   }
 
-  // Chrome Smooth Scroll
-  // try {
-  //   $.browserSelector();
-  //   if($("html").hasClass("chrome")) {
-  //       $.smoothScroll();
-  //   }
-  // } catch(err) {
-  //
-  // };
+  carCarousel();
 
-  // simpleForm version 2015-09-23 14:30 GMT +2
   simpleForm('form.form-callback');
 });
 
@@ -433,3 +424,22 @@ $(document).ready(function() {
 	$('.custom-input input').phAnim();
 	$('.custom-input textarea').phAnim();
 });
+
+function carCarousel(){
+  var width = $(window).width();
+
+  if ($('.cars-list--carousel').length <= 0) return;
+
+  else if (width < 767) {
+    $('.cars-list--carousel .cars-list__wrapper').slick({
+      dots: false,
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: '<button type="button" class="slick-prev"><i class="ion-chevron-left"></i></button>',
+      nextArrow: '<button type="button" class="slick-next"><i class="ion-chevron-right"></i></button>',
+      infinite: true
+    })
+  }
+
+}

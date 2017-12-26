@@ -1,0 +1,189 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Sale list' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Sale list' + ' - APM Group' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body.body
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+      
+      // Content
+      .content
+        .container
+          
+          .section__head.section__head--big
+            h1 Sale
+          
+          .text-center
+            p This vehicles were previously part of the Enterprise rental fleet and/or an affiliated company’s lease fleet or purchased by Enterprise from sources including auto auctions, customer trade-ins or from other sources, with a possible previous use including rental, lease, transportation network company or other use.
+            
+          .cars-list.cars-list--auto
+            .cars-list__wrapper
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-auto-1.png")
+                span.cars-list__title Sedan &amp; Hatch
+                span.cart-list__info 20 car brands
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-auto-2.png")
+                span.cars-list__title SUVs
+                span.cart-list__info 10 car brands
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-auto-3.png")
+                span.cars-list__title luxury cars
+                span.cart-list__info 10 car brands
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-auto-4.png")
+                span.cars-list__title Commercial vehicles
+                span.cart-list__info 10 car brands
+          
+          .section__head.section__head--line
+            h2 choose brand
+          
+          .cars-list
+            .cars-list__wrapper
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-logos-1.png")
+                span.cars-list__title audi
+                span.cart-list__info 20 cars
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-logos-2.png")
+                span.cars-list__title lamborghini
+                span.cart-list__info 10 cars
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-logos-3.png")
+                span.cars-list__title alfa romeo
+                span.cart-list__info 10 cars
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-logos-4.png")
+                span.cars-list__title jaguar
+                span.cart-list__info 10 cars
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-logos-5.png")
+                span.cars-list__title rolls royce
+                span.cart-list__info 10 cars
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-logos-6.png")
+                span.cars-list__title aston martin
+                span.cart-list__info 10 cars
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-logos-7.png")
+                span.cars-list__title porsche
+                span.cart-list__info 10 cars
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-logos-8.png")
+                span.cars-list__title ferrari
+                span.cart-list__info 10 cars
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-logos-9.png")
+                span.cars-list__title infiniti
+                span.cart-list__info 10 cars
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-logos-10.png")
+                span.cars-list__title lexus
+                span.cart-list__info 10 cars
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-logos-11.png")
+                span.cars-list__title bentley
+                span.cart-list__info 10 cars
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-logos-12.png")
+                span.cars-list__title peugeot
+                span.cart-list__info 10 cars
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-logos-13.png")
+                span.cars-list__title tesla
+                span.cart-list__info 20 cars
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-logos-14.png")
+                span.cars-list__title mclaren
+                span.cart-list__info 10 cars
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-logos-15.png")
+                span.cars-list__title landrover
+                span.cart-list__info 10 cars
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-logos-16.png")
+                span.cars-list__title Maybach
+                span.cart-list__info 10 cars
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-logos-17.png")
+                span.cars-list__title maserati
+                span.cart-list__info 10 cars
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-logos-18.png")
+                span.cars-list__title toyota
+                span.cart-list__info 10 cars
+      
+          .section__head.section__head--line
+            h2 select car
+      
+          .cars-list.cars-list--carousel
+            .cars-list__wrapper
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-carousel-1.png")
+                span.cars-list__info 2017
+                span.cars-list__title Lexus CT Hatch
+                span.cars-list__info From 
+                  strong $46,291 
+                  | Drive away
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-carousel-2.png")
+                span.cars-list__info 2017
+                span.cars-list__title Lexus IS Sedan
+                span.cars-list__info From 
+                  strong $66,535 
+                  | Drive away
+              a(href="#!").cars-list__block
+                .cars-list__img
+                  img(src="./img/cars-list/cars-list-carousel-3.png")
+                span.cars-list__info 2017
+                span.cars-list__title Lexus LS Sedan
+                span.cars-list__info From 
+                  strong $201,962 
+                  | Drive away
+      
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom
